@@ -9,7 +9,7 @@ import '../Navbar/Navbar.css'
 
 function NavScrollExample() {
   return (
-    <Navbar expand="xxl" className="bg-body-tertiary sticky-top" id='navbar_color'>
+    <Navbar expand="xxl" className="bg-body-tertiary sticky-top">
       <Container fluid>
         <a href="index.html"><img src="/public/logo_xs_small.jpg" alt="logo" className='logo' /></a>
         <Navbar.Brand>EZ Market</Navbar.Brand>
