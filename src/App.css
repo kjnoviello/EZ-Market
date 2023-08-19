@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #252424;
 }
 
 .main{
@@ -15,6 +16,8 @@
   row-gap: 50px;
   column-gap: 50px;
 }
+
+
 /* 
 .logo {
   height: 6em;

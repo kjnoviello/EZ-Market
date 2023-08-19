@@ -1,6 +1,8 @@
 .logo{
   margin-inline: 20px;
   border-radius: 50%;
+  border-color: black;
+  border-style: outset;
 }
 
 @keyframes logo {
