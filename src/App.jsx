@@ -19,9 +19,6 @@ function App() {
       <Hr></Hr>
       <main className='mainDiv'>
         <Mark></Mark>
-        <Hr></Hr>
-        <Mark></Mark>
-
       </main>
       <Footer></Footer>
     </>
