@@ -7,13 +7,16 @@ function ItemListContainer(greeting) {
 
 	return (
 		<Card style={{ width: '18rem' }} className='cardStyle'>
-			<Card.Img variant="top" src="/public/upscaled.jpg" />
+			<img src={greeting.imagen} />
 			<Card.Body>
-			<Card.Title>{greeting.saludo}</Card.Title>
+			<Card.Title>{greeting.titulo}</Card.Title>
 			<Card.Text>
-				{greeting.cuerpo}
+				{greeting.autor}
 			</Card.Text>
-			<Button variant="primary">Detalles</Button>
+			<Card.Title>
+				{greeting.precio}
+			</Card.Title>
+			<Button variant="success">Detalles</Button>
 			</Card.Body>
 		</Card>
 	);

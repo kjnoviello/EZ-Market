@@ -1,0 +1,32 @@
+.main{
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 50px;
+}
+
+
+.mainDivText{
+    display: flex;
+    color:  beige;
+    position: relative;
+    bottom: -40px;
+}
+.mainDivText h3{
+    text-shadow: 5px 5px 20px #000000; 
+}
+
+.mainDivDiv{
+    padding: 30px;
+    border-radius: 30px;
+    background-color: #252424;
+    margin-block: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 50px;
+    column-gap: 50px;
+  }

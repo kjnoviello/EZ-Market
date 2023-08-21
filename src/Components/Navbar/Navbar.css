@@ -5,6 +5,74 @@
   border-style: outset;
 }
 
+.headerBar{
+-webkit-backdrop-filter: blur(50px);
+backdrop-filter: blur(100px)
+}
+
+@media (max-width: 1400px){
+  .headerBar div button{
+    background-color: #198754;
+  }
+  .headerBar div button:hover{
+    background-color: #32c480;
+  }
+  .headerBar div span{
+    margin-inline: 20px;
+  }
+}
+
+/* titulo EZ Market*/
+.headerBar div span{
+  color: beige;
+}
+.headerBar div span:hover{
+  color: beige;
+}
+
+/* titulo menu */
+.headerBar div div a{
+  color: beige;
+}
+.headerBar div div a:hover{
+  color: #32c480;
+}
+
+#navbarScroll > div > a.nav-link.active{
+  color: #32c480;
+}
+
+/* icono carrito */
+#navbarScroll > form > div{
+  color: #198754;
+}
+#navbarScroll > form > div:hover{
+  color: #32c480;
+}
+
+/* titulo droplist */
+#navbarScrollingDropdown{
+  color: beige;
+}
+#navbarScrollingDropdown:hover{
+  color: #32c480;
+}
+
+.headerBar div div div div div{
+  background-color: #252424;
+}
+.headerBar div div div div div a:hover{
+  background-color: #252424;
+}
+
+.headerBar div div form button{
+  background-color: #198754;
+  color: beige;
+}
+.headerBar div div form button:hover{
+  background-color: #32c480;
+}
+
 @keyframes logo {
   from {
     transform: rotate(0deg);

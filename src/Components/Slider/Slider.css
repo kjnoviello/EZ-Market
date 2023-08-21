@@ -1,0 +1,19 @@
+.sliderImg1{
+    clip-path: polygon(75% 34%, 60% 28%, 7% 61%, 80% 45%, 83% 25%, 96% 57%, 18% 30%, 35% 73%, 8% 79%, 10% 66%, 91% 77%);
+    border-radius: 90pc;
+}
+
+.sliderImg2{
+    clip-path: polygon(56% 48%, 53% 18%, 8% 56%, 64% 23%, 94% 44%, 79% 53%, 82% 76%, 37% 60%, 9% 77%, 10% 20%);
+}
+
+.sliderImg3{
+    clip-path: polygon(13% 56%, 80% 20%, 100% 46%, 87% 68%, 68% 58%, 43% 74%, 6% 78%, 48% 26%, 8% 29%);
+}
+
+.h3Custom{
+    color: rgb(31, 31, 31);
+    font-size: 30px;
+    font-weight: 800;
+    text-shadow: 2px 2px 20px whitesmoke;
+}

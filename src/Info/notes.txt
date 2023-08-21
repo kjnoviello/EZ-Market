@@ -1,0 +1,13 @@
+text:
+color text: #666 or beige or rgb(243, 243, 196);
+
+cards:
+color backgroud: #dadada
+
+
+body:
+color backgroud: #252424
+
+Button:
+color "succes" from bootstrap
+color backgroud: #198754
