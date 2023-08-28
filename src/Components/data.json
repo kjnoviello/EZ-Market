@@ -1,35 +1,41 @@
 {
   "card1": {
+    "id": "1",
     "imagen": "public/img1.jpg",
     "titulo": "LA CASA DE LOS SUICIDIOS",
     "autor": "DONLEA, CHARLIE",
     "precio": "$7.990,00"
   },
   "card2": {
+    "id": "2",
     "imagen": "public/img2.jpg",
     "titulo": "AVENTURAS DE ARTHUR GORDON PYM",
     "autor": "POE, EDGAR ALLAN",
     "precio": "$9.500,00"
   },
   "card3": {
+    "id": "3",
     "imagen": "public/img3.jpg",
     "titulo": "GOLPE DE KARATE",
     "autor": "NORS, DORTHE",
     "precio": "$6.200,00"
   },
   "card4": {
+    "id": "4",
     "imagen": "public/img4.jpg",
     "titulo": "UN TIEMPO EN LA OSCURIDAD",
     "autor": "ACCAME, JORGE",
     "precio": "$5.890,00"
   },
   "card5": {
+    "id": "5",
     "imagen": "public/img5.jpg",
     "titulo": "EL VIENTO CONOCE MI NOMBRE",
     "autor": "ALLENDE, ISABEL",
     "precio": "$9.500,00"
   },
   "card6": {
+    "id": "6",
     "imagen": "public/img6.jpg",
     "titulo": "LAS INDIGNAS",
     "autor": "BAZTERRICA, AGUSTINA",

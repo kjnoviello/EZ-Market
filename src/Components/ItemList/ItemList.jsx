@@ -1,8 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import '../ItemListContainer/ItemListContainer.css'
+import './ItemList.css'
 
-function ItemListContainer(greeting) {
+function ItemList(greeting) {
 	
 
 	return (
@@ -22,4 +22,4 @@ function ItemListContainer(greeting) {
 	);
 }
 
-export default ItemListContainer;
+export default ItemList;

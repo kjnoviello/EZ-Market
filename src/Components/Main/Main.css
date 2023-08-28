@@ -1,4 +1,9 @@
 .main{
+    border-radius: 30px;
+    background-color: #666;
+  }
+
+.mainDiv{
     margin: 30px;
     display: flex;
     flex-direction: row;
@@ -6,7 +11,6 @@
     justify-content: center;
     row-gap: 50px;
 }
-
 
 .mainDivText{
     display: flex;
@@ -18,7 +22,7 @@
     text-shadow: 5px 5px 20px #000000; 
 }
 
-.mainDivDiv{
+.mainDivContainer{
     padding: 30px;
     border-radius: 30px;
     background-color: #252424;
