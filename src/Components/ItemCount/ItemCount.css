@@ -1,0 +1,10 @@
+.divItemCount{
+    display: flex;
+    gap: 20px;
+}
+label{
+    /* color: white; */
+    margin-inline: 10px;
+    text-align: center;
+    font-size: 30px;
+}

@@ -11,8 +11,7 @@ function NavScrollExample() {
   return (
     <Navbar expand="xxl" className="sticky-top headerBar">
       <Container fluid>
-        <a href="index.html"><img src="/public/logo_xs_small.jpg" alt="logo" className='logo' /></a>
-        <Navbar.Brand>EZ Market</Navbar.Brand>
+        <img src="/public/logo_xs_small.jpg" alt="logo" className='logo' />
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -20,16 +19,17 @@ function NavScrollExample() {
             style={{ maxHeight: '200px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Quienes somos</Nav.Link>
+            <Nav.Link href="#action1">EZ Market</Nav.Link>
+            <Nav.Link href="#action2">Home</Nav.Link>
+            <Nav.Link href="#action3">Quienes somos</Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Bebidas</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Picadas
+              <NavDropdown.Item href="#action4">Novelas</NavDropdown.Item>
+              <NavDropdown.Item href="#action5">
+                Clásicos
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Almacén
+              <NavDropdown.Item href="#action6">
+                Ranking
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

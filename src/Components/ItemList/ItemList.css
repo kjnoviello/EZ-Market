@@ -5,3 +5,9 @@
 #root > main > div > div.mainDivDiv > div > div{
     background-color: #dadada;
 }
+
+.img {
+    height: 286px;
+    width: 200px;
+    margin: auto;
+}
