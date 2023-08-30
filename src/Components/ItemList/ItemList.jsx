@@ -20,7 +20,7 @@ function ItemList(greeting) {
 			<Card.Title>
 				{greeting.precio}
 			</Card.Title>
-			<Button variant="primary" onClick={() => setModalShow(true)}>Más info</Button>
+			<Button variant="success" onClick={() => setModalShow(true)}>Más info</Button>
 			<ItemModal titulo={data.card1.titulo} autor={data.card1.autor} descripcion={data.card1.descripcion} show={modalShow} onHide={() => setModalShow(false)}></ItemModal>
 			</Card.Body>
 		</Card>

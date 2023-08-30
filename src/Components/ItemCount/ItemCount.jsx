@@ -4,7 +4,6 @@ import {  useState } from "react"
 import ('../ItemCount/ItemCount.css')
 
 const ItemCount = () => {
-
   const [count, setCount] = useState(0)
 
   const addCount = () => {
@@ -23,7 +22,6 @@ const ItemCount = () => {
       <label>{count}</label>
       <button onClick={addCount}>+1</button>
       <Button onClick={addCount}>Agregar</Button>
-
     </div>
   )
 }
