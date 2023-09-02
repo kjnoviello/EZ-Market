@@ -5,9 +5,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 // import Cardwidget from '../CardWidget/Cardwidget';
-import '../Navbar/Navbar.css'
+import './NavScroll.css'
 
-function NavScrollExample({card}) {
+function NavScroll(card) {
+  console.log(card);
   
   return (
     <Navbar expand="xxl" className="sticky-top headerBar">
@@ -35,8 +36,7 @@ function NavScrollExample({card}) {
             <Nav.Link href="#action3">Contacto</Nav.Link>
           </Nav>
           <Form className="d-flex">
-            {/* <Cardwidget></Cardwidget> */}
-            {card()}
+            {card.children}
             <Button variant="outline-success">LogIn</Button>
           </Form>
         </Navbar.Collapse>
@@ -45,4 +45,4 @@ function NavScrollExample({card}) {
   );
 }
 
-export default NavScrollExample;
+export default NavScroll;

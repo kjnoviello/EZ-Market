@@ -11,3 +11,14 @@ color backgroud: #252424
 Button:
 color "succes" from bootstrap
 color backgroud: #198754
+
+
+
+
+TAREAS:
+
+- hacer el componente ItemCount para que sume y reste al componente CardWidget
+- Terminar el componente ItemListContainer
+- Terminar el componente ItemList
+- Hacer el fetch al api en el componente correcto
+- Terminar el componente ItemModal
