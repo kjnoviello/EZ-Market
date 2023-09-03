@@ -8,19 +8,18 @@ export default function App() {
       const url = 'https://pokeapi.co/api/v2/berry/';
       const pokesJson = await fetch(url);
       const pokes = await pokesJson.json();
-      console.log(pokesJson);
-      setPokemons(pokes.results);
+      setPokemons(pokemons);
+      return pokes
     } catch (error) {
       console.log(error);
     }
-
-    // .then((res) => res.json())
-    // .then((res) => setPokemons(res.results))
-    // .catch((err) => console.log(err));
   };
 
   useEffect(() => {
-    getFetch();
+    getFetch()
+    .then(pokemons => console.log(pokemons))
+    .catch(err => err)
+    .finally(()=>{console.log("promesa cumplida");})
   }, []);
 
   return (

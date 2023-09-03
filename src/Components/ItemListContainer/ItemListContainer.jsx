@@ -1,23 +1,34 @@
 import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList.jsx'
-// import data from '../data.json';
-import { dFetch } from '../data.js';
+// import { dFetch } from '../data.js';
 import './ItemListContainer.css'
 import SpinnerLoading from '../SpinnerLoading/SpinnerLoading.jsx';
 
 const ItemListContainer = () => {
 
-const [products, setProducts] = useState([])
-const [loading, setLoading] = useState(true)
+  const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
 
-useEffect(()=>{
-  dFetch()
-  .then(respuesta => setProducts(respuesta))
-  .catch(err => console.log(err))
-  .finally(()=>{setLoading(!loading)})
-}, [])
+  const getFetch = async ()=>{  
+      try{
+          const url = 'https://64ee10061f87218271424186.mockapi.io/data'
+          const bookJson = await fetch(url)
+          const book = await bookJson.json()
 
+          // setProducts(products)
+          return book
+      }
+      catch (err) {
+          console.log(err);
+      }
+  }
 
+  useEffect(()=>{
+      getFetch()
+      .then(products => setProducts(products))
+      .catch(err => err)
+      .finally(()=>{console.log("este es el finally de api2"), setLoading(!loading)})
+  },[])
 
   return (
     <main className='main'>

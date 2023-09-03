@@ -5,7 +5,6 @@ import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import QuienesSomos from './Components/QuienesSomos/QuienesSomos';
 import Cardwidget from './Components/CardWidget/Cardwidget';
 import { useEffect } from 'react';
-import './Components/data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
