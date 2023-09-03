@@ -6,7 +6,7 @@
 .mainDiv{
     margin: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 50px;
@@ -14,6 +14,7 @@
 
 .mainDivText{
     display: flex;
+    justify-content: center;
     color:  beige;
     position: relative;
     bottom: -40px;
@@ -33,4 +34,5 @@
     justify-content: center;
     row-gap: 50px;
     column-gap: 50px;
+    color: beige;
   }

@@ -12,7 +12,7 @@ function ItemModal(datos) {
     titulo: PropTypes.string.isRequired,
     autor: PropTypes.string.isRequired,
     descripcion: PropTypes.string.isRequired,
-    stock: PropTypes.string.isRequired,
+    stock: PropTypes.number.isRequired,
     onHide: PropTypes.func.isRequired,
   };
 

@@ -18,6 +18,7 @@ function App() {
   return (
     <>
       <NavScroll>
+        {'aca paso el componente cardwidget como props'}
         <Cardwidget/>
       </NavScroll>
       <Hr/>

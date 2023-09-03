@@ -1,12 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import React from 'react';
 import ItemModal from '../ItemModal/ItemModal';
+import { useState } from 'react';
 import './ItemList.css';
-// import data from '../data.json';
 
 function ItemList(datos) {
-	const [modalShow, setModalShow] = React.useState(false);
+	const [modalShow, setModalShow] = useState(false);
 
 	return (
 		<Card style={{ width: '18rem' }} className='cardStyle'>
