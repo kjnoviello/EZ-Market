@@ -12,7 +12,7 @@ const ItemDetail = (products) => {
 
 
   return (
-    <div className="container row bg-white">
+    <div className="container row bg-white containerDetail">
         <div className="col divDetailContainer">
           <ModalTitle>
             {products.titulo}

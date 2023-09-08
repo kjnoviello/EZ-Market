@@ -1,0 +1,14 @@
+.cardStyle{
+    box-shadow: 0 1px 200px rgba(255, 255, 255, 0.8);
+}
+
+#root > main > div > div.mainDivDiv > div > div{
+    background-color: #dadada;
+}
+
+.img {
+    height: 286px;
+    width: 200px;
+    margin: auto;
+}
+

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { getFetch } from '../../services/api.js';
 import SpinnerLoading from '../SpinnerLoading/SpinnerLoading.jsx';
-import ItemList from '../ItemList/ItemList.jsx'
+// import Item from '../Item/Item.jsx'
+import ItemList from '../ItemList/ItemList.jsx';
 // import './ItemListContainer.css'
 
 const ItemListContainer = () => {
@@ -18,7 +19,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-      {loading ? <SpinnerLoading /> : products.map(product=><ItemList key={product.id} titulo={product.titulo} autor={product.autor} imagen={product.imagen} precio={product.precio} stock={product.stock} descripcion={product.descripcion}></ItemList>)} 
+      {loading ? <SpinnerLoading /> : <ItemList products={products}/>} 
     </>
 )
 }
