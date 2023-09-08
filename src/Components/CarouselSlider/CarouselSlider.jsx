@@ -6,7 +6,7 @@ function CarouselSlider() {
   return (
     <Carousel fade>
       <Carousel.Item>
-        <img className='sliderImg1' src='/public/slider1_l.jpg'></img>
+        <img className='sliderImg1' src='/slider1_l.jpg'></img>
         {/* <ExampleCarouselImage text="First slide" /> */}
         <Carousel.Caption>
           <h3 className='h3Custom'>First slide label</h3>
@@ -14,7 +14,7 @@ function CarouselSlider() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img className='sliderImg2' src='/public/slider2_l.jpg'></img>
+        <img className='sliderImg2' src='/slider2_l.jpg'></img>
         {/* <ExampleCarouselImage text="Second slide" /> */}
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -22,7 +22,7 @@ function CarouselSlider() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img className='sliderImg3' src='/public/slider3_l.jpg'></img>
+        <img className='sliderImg3' src='/slider3_l.jpg'></img>
         {/* <ExampleCarouselImage text="Third slide" /> */}
         <Carousel.Caption>
           <h3>Third slide label</h3>

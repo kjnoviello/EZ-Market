@@ -15,7 +15,7 @@ function NavScroll() {
     <>
       <Navbar expand="xxl" className="sticky-top headerBar">
         <Container fluid>
-          <img src="/public/logo_xs_small.jpg" alt="logo" className='logo' />
+          <img src="/logo_xs_small.jpg" alt="logo" className='logo' />
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
