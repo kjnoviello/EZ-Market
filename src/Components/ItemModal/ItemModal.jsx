@@ -39,7 +39,7 @@ function ItemModal(datos) {
           <p>
             Disponibilidad: {datos.stock}
           </p>
-          <ItemCount></ItemCount>
+          <ItemCount inicial={1} stock={5}></ItemCount>
         </div>
       </Modal.Body>
       <Modal.Footer>

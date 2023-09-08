@@ -1,9 +1,19 @@
 .divItemCount{
+    gap: 60px;
     display: flex;
+    flex-direction: column;
+}
+
+.divItemCount button{
+    width: 150px;
+    margin: 20px;
+}
+
+.divItemCountDiv{
     gap: 20px;
 }
+
 label{
-    /* color: white; */
     margin-inline: 10px;
     text-align: center;
     font-size: 30px;

@@ -17,8 +17,18 @@ color backgroud: #198754
 
 TAREAS:
 
-- hacer el componente ItemCount para que sume y reste al componente CardWidget
-- Terminar el componente ItemListContainer
-- Terminar el componente ItemList
-- Hacer el fetch al api en el componente correcto
-- Terminar el componente ItemModal
+- Terminar el componente Item
+
+- Terminar el componente ItemDetail
+
+- Retutilizar el fetch para el componente ItemListDetail
+
+- Rutas: hacer la clasificacion segun categorias y novedades.
+
+- El home debe mostrar todos los productos
+
+- Agrandar la BD con titulos de clasicos y mas novelas. LLevar a 10 novelas y 7 clasicos
+
+- agregar la buscqueda indexada en vivo
+
+- 

@@ -1,0 +1,9 @@
+.divDetailContainer{
+    padding: 20px;
+}
+
+.rightDown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

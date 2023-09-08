@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import ItemModal from '../ItemModal/ItemModal';
-import { useState } from 'react';
+// import ItemModal from '../ItemModal/ItemModal';
+// import { useState } from 'react';
 import './ItemList.css';
+// import ItemDetail from '../ItemDetail/ItemDetail';
 
 function ItemList(datos) {
-	const [modalShow, setModalShow] = useState(false);
+	// const [modalShow, setModalShow] = useState(false);
 
 	return (
 		<Card style={{ width: '18rem' }} className='cardStyle'>
@@ -18,8 +20,13 @@ function ItemList(datos) {
 			<Card.Title>
 				{datos.precio}
 			</Card.Title>
-			<Button variant="success" onClick={() => setModalShow(true)}>Más info</Button>
-			<ItemModal titulo={datos.titulo} autor={datos.autor} descripcion={datos.descripcion} show={modalShow} stock={datos.stock} onHide={() => setModalShow(false)}></ItemModal>
+			<Link to="/Detalle">
+				<Button variant="success">Más info</Button>
+			</Link>
+			{/* <Link to="/Detalle">
+				<Button variant="success" onClick={() => setModalShow(true)}>Más info</Button>
+			</Link> */}
+			{/* <ItemModal titulo={datos.titulo} autor={datos.autor} descripcion={datos.descripcion} show={modalShow} stock={datos.stock} onHide={() => setModalShow(false)}></ItemModal> */}
 			</Card.Body>
 		</Card>
 	);

@@ -40,7 +40,7 @@ backdrop-filter: blur(100px)
 }
 
 #navbarScroll > div > a.nav-link.active{
-  color: #32c480;
+  color: #32c480 !important;
 }
 
 /* icono carrito */
@@ -72,6 +72,11 @@ backdrop-filter: blur(100px)
 }
 .headerBar div div form button:hover{
   background-color: #32c480;
+}
+
+.hrCustom{
+  height: 5px;
+  background-color: #f8f9fa !important;
 }
 
 @keyframes logo {
