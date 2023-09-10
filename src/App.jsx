@@ -21,11 +21,12 @@ function App() {
       <NavScroll />
       <Routes>
         <Route path='/' element={<>
-                                  <QuienesSomos/>
+                                  <QuienesSomos titulo={"¡Bienvenidos a EZ Market!"}/>
                                   <Main titulo={"Nuestro catálogo"}>
                                     <ItemListContainer/>
                                   </Main>
-                                </>}/> 
+                                </>}/>
+        <Route path='QuienesSomos' element={<QuienesSomos titulo={"Acerca de nosotros..."} />}/> 
         <Route path='Productos' element={<Main titulo={"Novelas"}>
                                           <ItemListContainer/>
                                         </Main>}/>

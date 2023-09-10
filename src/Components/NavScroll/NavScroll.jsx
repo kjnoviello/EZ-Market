@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 // import Cardwidget from '../CardWidget/Cardwidget';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './NavScroll.css'
 import Cardwidget from '../CardWidget/Cardwidget';
 
@@ -24,7 +24,7 @@ function NavScroll() {
               navbarScroll
             >
               <Nav.Link as={Link} to="/">EZ Market</Nav.Link>
-              <Nav.Link href="#action2">Quienes somos</Nav.Link>
+              <Nav.Link as={Link} to="/QuienesSomos">Quienes somos</Nav.Link>
               <NavDropdown title="Productos" id="navbarScrollingDropdown">
                 <NavDropdown.Item>
                   <Nav.Link as={Link} to="/Productos">Novelas</Nav.Link>
@@ -37,7 +37,7 @@ function NavScroll() {
                   <Nav.Link as={Link} to="/Productos">Novedades</Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#action3">Contacto</Nav.Link>
+              <Nav.Link to="/QuienesSomos">Contacto</Nav.Link>
             </Nav>
             <Form className="d-flex">
               <Cardwidget />

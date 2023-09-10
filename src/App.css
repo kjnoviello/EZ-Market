@@ -6,13 +6,19 @@
   background-color: #252424;
 }
 
-@media (max-width: 768px) {
-  #root{
-    padding: 2rem;
-  }
-}
-
 .mainDiv{
   border-radius: 30px;
   background-color: #666;
+}
+
+@media (max-width: 992px) {
+  #root{
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #root{
+    padding: 0.2rem;
+  }
 }

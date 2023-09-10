@@ -4,6 +4,11 @@
     flex-direction: column;
 }
 
+.left{
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
 .divItemCount button{
     width: 150px;
     margin: 20px;
@@ -18,3 +23,20 @@ label{
     text-align: center;
     font-size: 30px;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .left{
+        display: inherit;
+    }
+    .divItemCountDiv{
+        gap: 0px;
+    }
+    .divItemCount{
+        gap: 30px;
+    }
+  }
+
+
+
