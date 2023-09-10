@@ -35,3 +35,18 @@
     row-gap: 50px;
     column-gap: 50px;
   }
+
+  
+@media screen and (max-width: 768px) {
+    div.modal-footer{
+        text-align: center;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .mainDivContainer{
+        padding:0%; 
+    }
+}

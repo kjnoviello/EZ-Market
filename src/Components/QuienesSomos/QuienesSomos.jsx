@@ -1,10 +1,10 @@
 import CarouselSlider from '../CarouselSlider/CarouselSlider'
 import '../QuienesSomos/QuienesSomos.css'
 
-const QuienesSomos = () => {
+const QuienesSomos = (datos) => {
   return (
     <div>
-        <h1 className='title'>¡Bienvenidos a EZ Market!</h1>
+        <h1 className='title'>{datos.titulo}</h1>
         <CarouselSlider/>
         <br />
         <p className='subtitle'>
