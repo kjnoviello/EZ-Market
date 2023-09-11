@@ -19,12 +19,12 @@ const ItemCount = ( {initial, stock, handleAdd}) => {
 
   return (
     <div className='divItemCount'>
-        <div className='divItemCountDiv left'>
+        <div className='left'>
           <Button variant="secondary" onClick={handleDecrementCount}>-1</Button>
           <label>{count}</label>
           <Button variant="secondary" onClick={handleIncrementCount}>+1</Button>
         </div>
-        <div className='divItemCountDiv'>
+        <div>
           <Link to="/Productos">
             <Button variant="secondary">Volver atrás</Button>
           </Link>

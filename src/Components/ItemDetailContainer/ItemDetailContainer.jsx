@@ -16,8 +16,7 @@ const ItemDetailContainer = () => {
     .then(products => setProducts(products[pid -1]))
     .catch(err => console.log("Error en la carga de datos", err))
     .finally(()=>{console.log("este es el finally de useEffect"),setLoading(false)})
-},[pid])
-
+  },[pid])
 
   return (
     <>

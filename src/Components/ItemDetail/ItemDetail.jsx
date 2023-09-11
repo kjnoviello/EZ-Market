@@ -11,6 +11,7 @@ const ItemDetail = (products) => {
     }
     console.log(products.imagen);
     console.log(products.titulo);
+    console.log(products.stock);
 
 
   return (

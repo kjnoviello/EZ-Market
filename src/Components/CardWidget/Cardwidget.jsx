@@ -2,11 +2,6 @@
 import { Badge } from 'react-bootstrap';
 import '../CardWidget/Cardwidget.css'
 
-//!---------------------------------
-//hay que poner el useState para que renderize
-//!---------------------------------
-
-
 const Cardwidget = () => {
     // const divRef = useRef(null)
     const cartItemCount = 9;

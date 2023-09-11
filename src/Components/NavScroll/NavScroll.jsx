@@ -1,13 +1,12 @@
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-// import Cardwidget from '../CardWidget/Cardwidget';
-import { Link } from 'react-router-dom';
-import './NavScroll.css'
 import Cardwidget from '../CardWidget/Cardwidget';
+import './NavScroll.css'
 
 function NavScroll() {
   
@@ -34,7 +33,7 @@ function NavScroll() {
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
-                  <Nav.Link as={Link} to="/Productos">Novedades</Nav.Link>
+                  <Nav.Link as={Link} to="/Productos/novedad">Novedades</Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link>Contacto</Nav.Link>

@@ -1,6 +1,5 @@
 import ('../Main/main.css');
 
-
 const Main = (card) => {
   
   return (

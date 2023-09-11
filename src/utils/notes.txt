@@ -17,18 +17,6 @@ color backgroud: #198754
 
 TAREAS:
 
-- Terminar el componente Item
-
-- Terminar el componente ItemDetail
-
-- Retutilizar el fetch para el componente ItemListDetail
-
 - Rutas: hacer la clasificacion segun categorias y novedades.
 
-- El home debe mostrar todos los productos
-
-- Agrandar la BD con titulos de clasicos y mas novelas. LLevar a 10 novelas y 7 clasicos
-
 - agregar la buscqueda indexada en vivo
-
-- 

@@ -5,7 +5,6 @@ function SpinnerLoading() {
             <Spinner animation="border" variant="success" size="lg" />
             <p>Loading...</p>
          </div>
-
 }
 
 export default SpinnerLoading;
