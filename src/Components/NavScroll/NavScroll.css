@@ -36,8 +36,13 @@ backdrop-filter: blur(100px)
   font-size: 20px;
 }
 
+.headerBar div div a:focus{
+  color: #198754;
+}
+
 .headerBar div div a:hover{
   color: #32c480;
+  
 }
 
 #navbarScroll > div > a.nav-link:active{

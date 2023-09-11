@@ -26,13 +26,16 @@ function App() {
                                     <ItemListContainer/>
                                   </Main>
                                 </>}/>
-        <Route path='QuienesSomos' element={<QuienesSomos titulo={"Acerca de nosotros..."} />}/> 
-        <Route path='Productos' element={<Main titulo={"Novelas"}>
+        <Route path='/QuienesSomos' element={<QuienesSomos titulo={"Acerca de nosotros..."} />}/> 
+        <Route path='/Productos' element={<Main titulo={"Todos"}>
                                           <ItemListContainer/>
                                         </Main>}/>
-        <Route path='Detalle' element={<Main titulo={"Detalles del libro"}>
-                                        <ItemDetailContainer/>
-                                      </Main>}/>
+        <Route path='/Productos/:cid' element={<Main titulo={"Novelas"}>
+                                          <ItemListContainer/>
+                                        </Main>}/>
+        <Route path='/Detalle/:pid' element={<Main titulo={"Detalles del libro"}>
+                                              <ItemDetailContainer/>
+                                            </Main>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
