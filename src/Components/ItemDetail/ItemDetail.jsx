@@ -9,6 +9,8 @@ const ItemDetail = (products) => {
       console.log(`Agregando ${count} unidad/es al carrito`);
       console.log(count);
     }
+    console.log(products.imagen);
+    console.log(products.titulo);
 
 
   return (
@@ -27,7 +29,7 @@ const ItemDetail = (products) => {
               <hr />
               <div className='divDisponibilidad'>
                   <p>
-                    Categoría: {products.categoria}
+                    <strong>Categoría: {products.categoria}</strong>
                   </p>
               </div>
             </ModalBody>
@@ -38,6 +40,7 @@ const ItemDetail = (products) => {
             </ModalFooter>
         </div>
         <div className="col divDetailContainer rightDown">
+              <img className='img' src={products.imagen} />
             <ItemCount initial={1} stock={products.stock} handleAdd={handleAdd} className="itemCount" ></ItemCount>
         </div>
     </div>

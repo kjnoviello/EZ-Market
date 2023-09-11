@@ -1,22 +1,22 @@
 .divItemCount{
-    gap: 60px;
     display: flex;
     flex-direction: column;
 }
 
 .left{
+    display: inherit;
     flex-direction: column-reverse;
     align-items: center;
 }
 
 .divItemCount button{
-    width: 150px;
+    width: 100px;
     margin: 20px;
 }
 
-.divItemCountDiv{
-    gap: 20px;
-}
+/* .divItemCountDiv{
+    gap: 0px;
+} */
 
 label{
     margin-inline: 10px;
@@ -26,17 +26,7 @@ label{
 
 
 
-@media screen and (max-width: 768px) {
-    .left{
-        display: inherit;
-    }
-    .divItemCountDiv{
-        gap: 0px;
-    }
-    .divItemCount{
-        gap: 30px;
-    }
-  }
+
 
 
 

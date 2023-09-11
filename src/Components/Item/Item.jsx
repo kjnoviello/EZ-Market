@@ -11,7 +11,7 @@ function Item(datos) {
 
 	return (
 		<Card style={{ width: '18rem' }} className='cardStyle'>
-			<img className='img' src={datos.imagen} />
+			<img className='img' src={datos.imagen} alt='Foto de portada'/>
 			<Card.Body>
 			<Card.Title>{datos.titulo}</Card.Title>
 			<Card.Text>
@@ -20,7 +20,7 @@ function Item(datos) {
 			<Card.Title>
 				{datos.precio}
 			</Card.Title>
-			<Link to="/Detalle">
+			<Link to={`/Detalle/${datos.id}`}>
 				<Button variant="success">Más info</Button>
 			</Link>
 			{/* <Link to="/Detalle">

@@ -12,9 +12,14 @@
     align-items: center;
 }
 
-
 @media screen and (max-width: 1200px) {
     .containerDetail{
       flex-direction: column;
     }
-  }
+}
+
+@media screen and (max-width: 768px) {
+    .rightDown{
+        flex-direction: column;
+    }
+}
