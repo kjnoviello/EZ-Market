@@ -9,10 +9,10 @@ const Footer = () => {
         </a>
         <ul className="nav col-md-4">
             <li className="nav-item"><a href="#" className="text nav-link px-2">Home</a></li>
-            <li className="nav-item"><a href="#" className="text nav-link px-2">Features</a></li>
-            <li className="nav-item"><a href="#" className="text nav-link px-2">Pricing</a></li>
+            <li className="nav-item"><a href="#" className="text nav-link px-2">Catálogo</a></li>
+            <li className="nav-item"><a href="#" className="text nav-link px-2">Contacto</a></li>
             <li className="nav-item"><a href="#" className="text nav-link px-2">FAQs</a></li>
-            <li className="nav-item"><a href="#" className="text nav-link px-2">About</a></li>
+            <li className="nav-item"><a href="#" className="text nav-link px-2">Sobre nosotros</a></li>
         </ul>
     </footer>
 

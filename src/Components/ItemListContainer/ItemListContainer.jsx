@@ -11,7 +11,6 @@ const ItemListContainer = () => {
   const { cid } = useParams()
   console.log(cid);
 
-
   useEffect(()=>{
 
     if (cid && cid !== "novedad") {

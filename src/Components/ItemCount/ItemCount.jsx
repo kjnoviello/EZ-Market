@@ -4,18 +4,14 @@ import { Link } from 'react-router-dom'
 import { useCount } from '../Hooks/useCount'
 import ('../ItemCount/ItemCount.css')
 
-
 const ItemCount = ( {initial, stock, handleAdd}) => {
   const {count, handleDecrementCount, handleIncrementCount} = useCount(initial, stock)
-
-  
 
   ItemCount.propTypes = {
     initial: PropTypes.number.isRequired,
     stock: PropTypes.number.isRequired,
     handleAdd: PropTypes.func.isRequired,
   };
- 
 
   return (
     <div className='divItemCount'>

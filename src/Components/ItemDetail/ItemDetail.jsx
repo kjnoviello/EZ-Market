@@ -4,15 +4,11 @@ import ('./ItemDetail.css')
 
 const ItemDetail = (products) => {
 
-     //funcion agregar al carrito
-     const handleAdd = (count)=> {
-      console.log(`Agregando ${count} unidad/es al carrito`);
-      console.log(count);
-    }
-    console.log(products.imagen);
-    console.log(products.titulo);
-    console.log(products.stock);
-
+  //funcion agregar al carrito
+  const handleAdd = (count)=> {
+    console.log(`Agregando ${count} unidad/es al carrito`);
+    console.log(count);
+  }
 
   return (
     <div className="container-lg row bg-white containerDetail">
