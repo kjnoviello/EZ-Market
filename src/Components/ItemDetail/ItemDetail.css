@@ -12,6 +12,10 @@
     align-items: center;
 }
 
+.pDescripcion{
+    font-style: italic;
+}
+
 @media screen and (max-width: 1200px) {
     .containerDetail{
       flex-direction: column;

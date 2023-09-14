@@ -9,7 +9,6 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const { cid } = useParams()
-  console.log(cid);
 
   useEffect(()=>{
 
@@ -22,7 +21,7 @@ const ItemListContainer = () => {
       getFetch()
       .then(products => setProducts(products.filter(product => product.novedad === true)))
       .catch(err => console.log("Error en la carga de datos", err))
-      .finally(()=>{console.log("este es el finally de useEffect"), setLoading(false)}) 
+      .finally(()=>{console.log("este es el finally de useEffect"), setLoading(false)});
     } else{
       getFetch()
       .then(products => setProducts(products))
@@ -30,6 +29,14 @@ const ItemListContainer = () => {
       .finally(()=>{console.log("este es el finally de useEffect"), setLoading(false)}) 
     }
   },[cid])
+
+
+  // Esto se llama Clean Up para saber si se desmonta un comp
+  useEffect(()=>{
+    return()=>{
+      console.log('desmontando itemlistcontainer');
+    }
+  })
 
   return (
     <>

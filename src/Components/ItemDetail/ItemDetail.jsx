@@ -1,14 +1,22 @@
 import { ModalBody, ModalFooter, ModalTitle } from "react-bootstrap"
+import { useContext } from "react"
 import ItemCount from "../ItemCount/ItemCount"
+import { CardContext } from "../../context/CartContext"
 import ('./ItemDetail.css')
 
 const ItemDetail = (products) => {
 
-  //funcion agregar al carrito
+  const {addProduct, cardList} = useContext(CardContext)
+
+  //funcion para agregar al carrito
   const handleAdd = (count)=> {
-    console.log(`Agregando ${count} unidad/es al carrito`);
-    console.log(count);
+    addProduct({...products, count})
   }
+  console.log(cardList);
+    //* en la funcion handleAdd a count se le puede cambiar el nombre ya que
+    //* es el nombre de un parametro y va a seguir siendo la variable count.
+    //* Esto es debido a que esta funcion en itemCount tiene como parametro a count
+
 
   return (
     <div className="container-lg row bg-white containerDetail">
@@ -20,7 +28,7 @@ const ItemDetail = (products) => {
           <ModalBody>
               <h5>{products.autor}</h5>
               <hr />
-              <p>
+              <p className="pDescripcion">
                   {products.descripcion}
               </p>
               <hr />

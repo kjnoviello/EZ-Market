@@ -1,8 +1,13 @@
-// import Filter from "../Filter/Filter"
+import PropTypes from 'prop-types'
 import Item from "../Item/Item"
 
 
 const ItemList = ({products}) => {
+  
+  ItemList.propTypes = {
+    products: PropTypes.array.isRequired,
+  };
+
 
   return (  
         <>

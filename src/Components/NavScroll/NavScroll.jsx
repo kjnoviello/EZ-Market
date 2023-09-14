@@ -36,7 +36,7 @@ function NavScroll() {
                   <Nav.Link as={Link} to="/Productos/novedad">Novedades</Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link>Contacto</Nav.Link>
+              <Nav.Link as={Link} to="/Contacto">Contacto</Nav.Link>
             </Nav>
             <Form className="d-flex">
               <Cardwidget />
