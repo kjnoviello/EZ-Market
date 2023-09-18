@@ -30,7 +30,6 @@ const ItemListContainer = () => {
     }
   },[cid])
 
-
   // Esto se llama Clean Up para saber si se desmonta un comp
   useEffect(()=>{
     return()=>{

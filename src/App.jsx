@@ -1,5 +1,5 @@
-import CardContextProvider  from './context/CartContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CardContextProvider  from './context/CartContext';
 import NavScroll from './Components/NavScroll/NavScroll';
 import Footer from './Components/Footer/Footer';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
@@ -9,10 +9,10 @@ import Contact from './Components/Contact/Contact';
 import Main from './Components/Main/Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import Cart from './Components/Cart/Cart';
 
 function App() {
  
-
   return (
     <BrowserRouter>
       <CardContextProvider>
@@ -36,7 +36,10 @@ function App() {
                                                 </Main>}/>
           <Route path='/Contacto' element={ <Main titulo={"Contacto"}>
                                               <Contact/>
-                                            </Main>}/>                                      
+                                            </Main>}/>
+          <Route path='/Cart' element={<Main titulo={"Tu carrito"}>
+                                              <Cart/>
+                                            </Main>}/>
         </Routes>
         <Footer/>
       </CardContextProvider>

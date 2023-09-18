@@ -69,12 +69,12 @@ function Contact() {
   return (
     <div className="container-lg row bg-white divContact">
     <Tabs
-      defaultActiveKey="profile"
+      defaultActiveKey="home"
       id="uncontrolled-tab-example"
       className="mb-"
     >
       <Tab eventKey="home" title="Información">
-        <div className="col form">
+        <div className="col contenedor">
           <p>
             EZ Market - Tienda de libros
           </p>
@@ -108,7 +108,7 @@ function Contact() {
         </div>
       </Tab>
       <Tab eventKey="profile" title="Formulario">
-        <div className="col form">     
+        <div className="col contenedorForm contenedor">     
           <div className="mb-3">
             <p className="form-label">Nombre y apellido</p>
             <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Nombre y apellido" />

@@ -1,11 +1,27 @@
 import { Button } from 'react-bootstrap'
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { useCount } from '../Hooks/useCount'
+import { useState } from 'react'
+import ToastAlert from '../ToastAlert/ToastAlert'
+import PropTypes from 'prop-types'
 import ('../ItemCount/ItemCount.css')
 
 const ItemCount = ( {initial, stock, handleAdd}) => {
   const {count, handleDecrementCount, handleIncrementCount} = useCount(initial, stock)
+  const [showToastAlert, setShowToastAlert] = useState(false)
+  const [isButton, setIsButton] = useState(true)
+  
+  //funcion para mostrar el toast
+  const handleShowToastAlert = () =>{
+      setShowToastAlert(true)
+      setIsButton(false)
+      setTimeout(function(){
+        setShowToastAlert(false)
+        setIsButton(true)
+      }, 2000);
+    }
+
+    //! Establecer el estado de nuevo para el re-render
 
   ItemCount.propTypes = {
     initial: PropTypes.number.isRequired,
@@ -22,12 +38,14 @@ const ItemCount = ( {initial, stock, handleAdd}) => {
         </div>
         <div>
           <Link to="/Productos">
-            <Button variant="secondary">Volver atrás</Button>
+            <Button variant="secondary">Volver a la tienda</Button>
           </Link>
-          <Button variant="success" onClick={()=> handleAdd(count)}>Agregar al carrito</Button>
+           { isButton && ( <Button variant="success" onClick={()=>{ handleAdd(count); handleShowToastAlert()}}>Agregar al carrito</Button> )}
+            {showToastAlert && <ToastAlert count={count}></ToastAlert>}
         </div>
     </div>
   )
 }
 
 export default ItemCount
+

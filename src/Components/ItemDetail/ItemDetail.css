@@ -6,7 +6,7 @@
     padding: 20px;
 }
 
-.rightDown{
+.contador{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .rightDown{
+    .contador{
         flex-direction: column;
     }
 }

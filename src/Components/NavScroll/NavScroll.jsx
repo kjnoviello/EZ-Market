@@ -39,8 +39,10 @@ function NavScroll() {
               <Nav.Link as={Link} to="/Contacto">Contacto</Nav.Link>
             </Nav>
             <Form className="d-flex">
-              <Cardwidget />
-              <Button variant="outline-success">LogIn</Button>
+                <Nav.Link as={Link} to="/Cart">
+                  <Cardwidget />
+                </Nav.Link>
+              <Button variant="outline-success" >LogIn</Button>
             </Form>
           </Navbar.Collapse>
         </Container>

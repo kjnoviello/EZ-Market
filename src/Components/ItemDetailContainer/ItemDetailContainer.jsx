@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      {loading ? <SpinnerLoading /> : <ItemDetail titulo={products.titulo} autor={products.autor} descripcion={products.descripcion} stock={products.stock} categoria={products.categoria} imagen={products.imagen}></ItemDetail>} 
+      {loading ? <SpinnerLoading /> : <ItemDetail titulo={products.titulo} autor={products.autor} descripcion={products.descripcion} stock={products.stock} categoria={products.categoria} imagen={products.imagen} precio={products.precio}></ItemDetail>} 
     </>
   )
 }

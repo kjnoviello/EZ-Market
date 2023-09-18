@@ -19,4 +19,9 @@ TAREAS:
 
 - Rutas: hacer la clasificacion segun categorias y novedades.
 
-- agregar la buscqueda indexada en vivo
+- Agregar condicionales
+
+
+- (ocional) agregar la buscqueda indexada en vivo
+
+- (opcional) componente de LogIn

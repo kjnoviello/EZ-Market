@@ -1,6 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './CarouselSlider.css'
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
 
 function CarouselSlider() {
   return (

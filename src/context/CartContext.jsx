@@ -15,6 +15,9 @@ const CardContextProvider = ({children}) => {
         setCardList([...cardList, newProduct])
     }
 
+
+    //! aca poner las funciones para eliminar, precios y etc
+
     return (
         <>
             <CardContext.Provider value={{
