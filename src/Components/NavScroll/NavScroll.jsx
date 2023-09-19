@@ -26,14 +26,14 @@ function NavScroll() {
               <Nav.Link as={Link} to="/QuienesSomos">Quienes somos</Nav.Link>
               <NavDropdown title="Productos" id="navbarScrollingDropdown">
                 <NavDropdown.Item>
-                  <Nav.Link as={Link} to="/Productos/Novela">Novelas</Nav.Link>
+                  <Nav.Link as={Link} to="/Categoria/Novela">Novelas</Nav.Link>
                 </NavDropdown.Item>
                   <NavDropdown.Item>
-                  <Nav.Link as={Link} to="/Productos/Clasicos">Clasicos</Nav.Link>
+                  <Nav.Link as={Link} to="/Categoria/Clasicos">Clasicos</Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
-                  <Nav.Link as={Link} to="/Productos/novedad">Novedades</Nav.Link>
+                  <Nav.Link as={Link} to="/Categoria/novedad">Novedades</Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link as={Link} to="/Contacto">Contacto</Nav.Link>

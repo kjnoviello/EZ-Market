@@ -28,7 +28,7 @@ function App() {
           <Route path='/Productos' element={  <Main titulo={"Todos"}>
                                                 <ItemListContainer/>
                                               </Main>}/>
-          <Route path='/Productos/:cid' element={ <Main titulo={"Libros"}>
+          <Route path='/Categoria/:cid' element={ <Main titulo={"Libros"}>
                                                     <ItemListContainer/>
                                                   </Main>}/>
           <Route path='/Detalle/:pid' element={ <Main titulo={"Detalles del libro"}>
