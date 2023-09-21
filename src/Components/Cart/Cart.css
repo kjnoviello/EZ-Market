@@ -146,7 +146,8 @@ height: 300px;
             transform: translateX(-8px);
   }
 }
-  
+
+ /* responsive */
 @media (min-width: 768px) {
   .container-lg {
     flex-wrap: nowrap;
@@ -181,8 +182,9 @@ height: 300px;
   .product-list li{
     flex-direction: column;;
   }
-  #productID div{
+  #productList div{
     justify-content: center;
+    width: max-content;
   }
 }
 

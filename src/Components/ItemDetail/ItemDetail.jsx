@@ -6,13 +6,12 @@ import ('./ItemDetail.css')
 
 const ItemDetail = (products) => {
 
-  const {addProduct, cardList} = useContext(CardContext)
+  const {addProduct} = useContext(CardContext)
 
   //funcion para agregar al carrito
   const handleAdd = (count)=> {
     addProduct({...products, count})
   } 
-  console.log(cardList);
     //* en la funcion handleAdd a count se le puede cambiar el nombre ya que
     //* es el nombre de un parametro y va a seguir siendo la variable count.
     //* Esto es debido a que esta funcion en itemCount tiene como parametro a count

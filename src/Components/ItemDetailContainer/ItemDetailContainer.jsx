@@ -9,7 +9,6 @@ const ItemDetailContainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const {pid} = useParams()
-    console.log(pid);
 
   useEffect(()=>{
     getFetch()
@@ -26,7 +25,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      {loading ? <SpinnerLoading /> : <ItemDetail titulo={products.titulo} autor={products.autor} descripcion={products.descripcion} stock={products.stock} categoria={products.categoria} imagen={products.imagen} precio={products.precio}></ItemDetail>} 
+      {loading ? <SpinnerLoading /> : <ItemDetail titulo={products.titulo} autor={products.autor} descripcion={products.descripcion} stock={products.stock} categoria={products.categoria} imagen={products.imagen} precio={products.precio} id={products.id}></ItemDetail>} 
     </>
   )
 }

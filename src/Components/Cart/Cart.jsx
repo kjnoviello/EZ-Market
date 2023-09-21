@@ -5,8 +5,7 @@ import "./Cart.css";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cardList } = useContext(CardContext);
-  console.log("esto es cartList", cardList);
+  const { cardList, deleteProduct, totalCount, totalPrice } = useContext(CardContext);
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -30,10 +29,10 @@ const Cart = () => {
                 <Link to="/Productos">
                   <Button variant="success" className="btnVolverCarrito">Volver a tienda</Button>
                 </Link>
-                <Link to="/Productos/novedad">
+                <Link to="/Categoria/novedad">
                   <Button variant="success" className="btnVolverCarrito">Ir a novedades</Button>
                 </Link>
-              </div>
+              </div>  
             </div>
   } else {
     return (
@@ -42,25 +41,25 @@ const Cart = () => {
           <ul>
             <li  id="productList">
               <div>
-                <p><strong>Cantidad total</strong></p>
+                <h5><strong>Cantidad total: {totalCount()}u.</strong></h5>
               </div>
               <div>
-                <p><strong>Precio total</strong></p>
+                <h5><strong>Precio total: ${totalPrice()}</strong></h5>
               </div>
             </li>
             {cardList.map((product) => (
               <>
               <li id="productID" key={product.id}>
                 <div className="productID-divP">
-                  <p>{product.titulo}</p>
-                  <p>{product.count}u.</p>
-                  <p>{product.precio}</p>
+                  <p><strong>{product.titulo}</strong></p>
+                  <p><strong>{product.count}u.</strong></p>
+                  <p><strong>$ {product.precio}</strong></p>
                 </div>
                 <div className="productID-divBtn">
                   <Button variant="success" onClick={() => handleShowDetails(product)}>
                     Ver Detalles
                   </Button>
-                  <Button variant="dark">X</Button>
+                  <Button variant="dark" onClick={()=>{deleteProduct(product.id); handleCloseDetails()}}>X</Button>
                 </div>
               </li>
               </>

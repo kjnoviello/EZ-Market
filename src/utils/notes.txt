@@ -19,10 +19,16 @@ TAREAS:
 
 - Agregar condicionales
 
-- hacer las funciones en el carrito
+- limitar la compra en Cart al stock del producto
+
+- vaciar carrito????
 
 - establecer la conexion con firebase
+
+- formulario de compra con firebase (clase firebase 02)
 
 - (ocional) agregar la busqueda indexada en vivo
 
 - (opcional) componente de LogIn
+
+- (opcional) aplicar animaciones de librerias
