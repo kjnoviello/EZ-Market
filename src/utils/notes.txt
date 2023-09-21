@@ -17,11 +17,12 @@ color backgroud: #198754
 
 TAREAS:
 
-- Rutas: hacer la clasificacion segun categorias y novedades.
-
 - Agregar condicionales
 
+- hacer las funciones en el carrito
 
-- (ocional) agregar la buscqueda indexada en vivo
+- establecer la conexion con firebase
+
+- (ocional) agregar la busqueda indexada en vivo
 
 - (opcional) componente de LogIn

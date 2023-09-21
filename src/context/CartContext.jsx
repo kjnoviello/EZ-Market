@@ -14,6 +14,9 @@ const CardContextProvider = ({children}) => {
     const addProduct = (newProduct) => {
         setCardList([...cardList, newProduct])
     }
+    
+
+
 
 
     //! aca poner las funciones para eliminar, precios y etc

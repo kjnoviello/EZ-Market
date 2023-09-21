@@ -18,6 +18,12 @@ const ItemDetailContainer = () => {
     .finally(()=>{console.log("este es el finally de useEffect"),setLoading(false)})
   },[pid])
 
+
+    //funcion que nos da firebase para traer un doc de firebase
+  // useEffect(()=>{
+  //   const db = getFirestore()
+  // })
+
   return (
     <>
       {loading ? <SpinnerLoading /> : <ItemDetail titulo={products.titulo} autor={products.autor} descripcion={products.descripcion} stock={products.stock} categoria={products.categoria} imagen={products.imagen} precio={products.precio}></ItemDetail>} 

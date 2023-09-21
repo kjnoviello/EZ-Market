@@ -10,6 +10,7 @@ const ItemListContainer = () => {
   const [loading, setLoading] = useState(true)
   const { cid } = useParams()
 
+
   useEffect(()=>{
 
     if (cid && cid !== "novedad") {
