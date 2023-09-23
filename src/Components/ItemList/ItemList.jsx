@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import Item from "../Item/Item"
+import { Fade } from 'react-awesome-reveal';
 
 
 const ItemList = ({products}) => {
@@ -11,7 +12,7 @@ const ItemList = ({products}) => {
 
   return (  
         <>
-            {products.map(product=><Item key={product.id} products={products} titulo={product.titulo} autor={product.autor} imagen={product.imagen} precio={product.precio} stock={product.stock} descripcion={product.descripcion} id={product.id}></Item>)}
+            {products.map(product=><Fade><Item key={product.id} products={products} titulo={product.titulo} autor={product.autor} imagen={product.imagen} precio={product.precio} stock={product.stock} descripcion={product.descripcion} id={product.id}></Item></Fade>)}
         </>
   )
 }

@@ -1,4 +1,5 @@
 // import { useRef } from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { Button } from 'react-bootstrap';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
@@ -18,6 +19,7 @@ function Contact() {
     >
       <Tab eventKey="home" title="Información">
         <div className="col contenedor">
+        <Fade cascade>
           <p>
             EZ Market - Tienda de libros
           </p>
@@ -48,17 +50,20 @@ function Contact() {
               </a>
             </div>
           </div>
+        </Fade>
         </div>
       </Tab>
       <Tab eventKey="profile" title="Formulario">
         <div className="col contenedorForm contenedor">     
           <div className="mb-3">
+          <Fade cascade>
             <p className="form-label">Nombre y apellido</p>
             <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Nombre y apellido" />
             <p className="form-label">Email address</p>
             <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
             <p className="form-label">Example textarea</p>
             <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </Fade>
           </div>
           <Button variant="success" type='submit'>Enviar</Button>
         </div>

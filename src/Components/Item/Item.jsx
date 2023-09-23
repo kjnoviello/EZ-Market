@@ -12,7 +12,7 @@ function Item(datos) {
 	return (
 		<Card style={{ width: '18rem' }} className='cardStyle'>
 			<img className='img' src={datos.imagen} alt='Foto de portada'/>
-			<Card.Body>
+			<Card.Body className='cardBody'>
 			<Card.Title>{datos.titulo}</Card.Title>
 			<Card.Text>
 				{datos.autor}

@@ -62,19 +62,19 @@
   min-height: 300px;
 }
 
-.contenedorForm div {
+.contenedorForm div div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.contenedorForm div input{
+.contenedorForm div div input{
   width: calc(100% - 15%);
   margin-bottom: 30px;
 }
 
-.contenedorForm div textarea{
+.contenedorForm div div textarea{
   width: calc(100% - 15%);
 }
 
@@ -90,10 +90,10 @@
     padding-block: 20px;
     padding-inline: 0px;
   }
-  .contenedorForm div input{
+  .contenedorForm div div input{
     width: 100%;
   }
-  .contenedorForm div textarea{
+  .contenedorForm div div textarea{
     width: 100%;
   }
 }

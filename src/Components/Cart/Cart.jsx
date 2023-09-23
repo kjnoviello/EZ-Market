@@ -3,6 +3,7 @@ import { CardContext } from "../../context/CartContext";
 import { Button } from "react-bootstrap";
 import "./Cart.css";
 import { Link } from "react-router-dom";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Cart = () => {
   const { cardList, deleteProduct, totalCount, totalPrice } = useContext(CardContext);
@@ -38,6 +39,7 @@ const Cart = () => {
     return (
       <div className="container-lg row bg-white containerDetail">
         <div className="product-list">
+          <Fade cascade triggerOnce="true">
           <ul>
             <li  id="productList">
               <div>
@@ -65,27 +67,32 @@ const Cart = () => {
               </>
             ))}
           </ul>
+          </Fade>
         </div>
-        <div className="product-details">
-          {selectedProduct && (
-            <>
-              <h2>Detalles del Producto</h2>
-                <div className="detalleDiv">
-                  <div className="imgDiv ">
-                      <img className='img' src={selectedProduct.imagen} alt="" />
+          <div className="product-details">
+            {selectedProduct && (
+              <>
+                <Fade triggerOnce="true">
+                <Slide direction="down" triggerOnce="true">
+                <h2>Detalles del Producto</h2>
+                  <div className="detalleDiv">
+                    <div className="imgDiv ">
+                        <img className='img' src={selectedProduct.imagen} alt="" />
+                    </div>
+                    <div>
+                      <p><strong>Titulo:{selectedProduct.titulo} </strong></p>
+                      <p><strong>Autor: {selectedProduct.autor}</strong></p>
+                      <p><em>Descripción: {selectedProduct.descripcion}</em></p>
+                    </div>
                   </div>
-                  <div>
-                    <p><strong>Titulo:{selectedProduct.titulo} </strong></p>
-                    <p><strong>Autor: {selectedProduct.autor}</strong></p>
-                    <p><em>Descripción: {selectedProduct.descripcion}</em></p>
-                  </div>
-                </div>
-              <Button variant="success" onClick={handleCloseDetails}>
-                Cerrar Detalles
-              </Button>
-            </>
-          )}
-        </div>
+                </Slide>
+                <Button variant="success" onClick={handleCloseDetails}>
+                  Cerrar Detalles
+                </Button>
+              </Fade>
+              </>
+            )}
+          </div>
       </div>
     );
   }

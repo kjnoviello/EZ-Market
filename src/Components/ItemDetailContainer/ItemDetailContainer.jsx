@@ -3,6 +3,7 @@ import { getFetch } from '../../services/api.js';
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail"
 import SpinnerLoading from "../SpinnerLoading/SpinnerLoading"
+import { Fade, Zoom } from "react-awesome-reveal";
 
 const ItemDetailContainer = () => {
 
@@ -25,9 +26,13 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      {loading ? <SpinnerLoading /> : <ItemDetail titulo={products.titulo} autor={products.autor} descripcion={products.descripcion} stock={products.stock} categoria={products.categoria} imagen={products.imagen} precio={products.precio} id={products.id}></ItemDetail>} 
+      {loading ? <SpinnerLoading /> : <Fade><ItemDetail titulo={products.titulo} autor={products.autor} descripcion={products.descripcion} stock={products.stock} categoria={products.categoria} imagen={products.imagen} precio={products.precio} id={products.id}></ItemDetail></Fade>} 
+      {/* {loading ? <SpinnerLoading /> : <ItemDetail titulo={products.titulo} autor={products.autor} descripcion={products.descripcion} stock={products.stock} categoria={products.categoria} imagen={products.imagen} precio={products.precio} id={products.id}></ItemDetail>}  */}
     </>
   )
 }
 
 export default ItemDetailContainer
+
+
+

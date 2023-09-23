@@ -7,9 +7,9 @@ import QuienesSomos from './Components/QuienesSomos/QuienesSomos';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import Contact from './Components/Contact/Contact';
 import Main from './Components/Main/Main';
+import Cart from './Components/Cart/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import Cart from './Components/Cart/Cart';
 
 
 function App() {
