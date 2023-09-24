@@ -2,8 +2,8 @@ import { useContext, useState } from "react";
 import { CardContext } from "../../context/CartContext";
 import { Button } from "react-bootstrap";
 import "./Cart.css";
-import { Link } from "react-router-dom";
 import { Fade, Slide } from "react-awesome-reveal";
+import CartEmpty from "../CartEmpty/CartEmpty";
 
 const Cart = () => {
   const { cardList, deleteProduct, totalCount, totalPrice } = useContext(CardContext);
@@ -19,25 +19,10 @@ const Cart = () => {
   };
 
   if (cardList.length === 0) {
-    return  <div className="container-lg row bg-white containerDetail">
-              <br />
-              <h2>Tu carrito está vacio</h2>
-              <div className="imgCarritoVacio shake-horizontal">
-                <img src="carritoVacio.png" alt="carrito_vacio" />
-              </div>
-              <hr />
-              <div>
-                <Link to="/Productos">
-                  <Button variant="success" className="btnVolverCarrito">Volver a tienda</Button>
-                </Link>
-                <Link to="/Categoria/novedad">
-                  <Button variant="success" className="btnVolverCarrito">Ir a novedades</Button>
-                </Link>
-              </div>  
-            </div>
+    return  <CartEmpty />
   } else {
     return (
-      <div className="container-lg row bg-white containerDetail">
+      <div className="container-lg row bg-white">
         <div className="product-list">
           <Fade cascade triggerOnce="true">
           <ul>
@@ -100,3 +85,4 @@ const Cart = () => {
 
 
 export default Cart;
+
