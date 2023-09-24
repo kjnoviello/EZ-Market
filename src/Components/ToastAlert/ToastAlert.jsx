@@ -11,7 +11,7 @@ function ToastAlert({count}) {
 
   return (
     <Toast id='toastDiv'>
-      <Toast.Body><strong>{`Agregado ${count} unidad/es` }</strong></Toast.Body>
+      <Toast.Body><strong>{`Agregado ${count} unidad/es.` }</strong></Toast.Body>
     </Toast>
   );
 }

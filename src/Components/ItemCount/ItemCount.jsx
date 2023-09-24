@@ -10,8 +10,8 @@ const ItemCount = ( {initial, stock, handleAdd}) => {
   const {count, handleDecrementCount, handleIncrementCount} = useCount(initial, stock)
   const [showToastAlert, setShowToastAlert] = useState(false)
   const [isButton, setIsButton] = useState(true)
-  
-  //funcion para mostrar el toast
+
+
   const handleShowToastAlert = () =>{
       setShowToastAlert(true)
       setIsButton(false)
@@ -20,6 +20,8 @@ const ItemCount = ( {initial, stock, handleAdd}) => {
         setIsButton(true)
       }, 2000);
     }
+  
+  //funcion para mostrar el toast
 
     //! Establecer el estado de nuevo para el re-render
 
