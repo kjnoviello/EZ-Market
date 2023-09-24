@@ -1,13 +1,9 @@
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-// import ItemModal from '../ItemModal/ItemModal';
-// import { useState } from 'react';
 import './Item.css';
-// import ItemDetail from '../ItemDetail/ItemDetail';
 
 function Item(datos) {
-	// const [modalShow, setModalShow] = useState(false);
 
 	return (
 		<Card style={{ width: '18rem' }} className='cardStyle'>
@@ -23,10 +19,6 @@ function Item(datos) {
 			<Link to={`/Detalle/${datos.id}`}>
 				<Button variant="success">Más info</Button>
 			</Link>
-			{/* <Link to="/Detalle">
-				<Button variant="success" onClick={() => setModalShow(true)}>Más info</Button>
-			</Link> */}
-			{/* <ItemModal titulo={datos.titulo} autor={datos.autor} descripcion={datos.descripcion} show={modalShow} stock={datos.stock} onHide={() => setModalShow(false)}></ItemModal> */}
 			</Card.Body>
 		</Card>
 	);

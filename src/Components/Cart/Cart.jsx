@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { CardContext } from "../../context/CartContext";
 import { Button } from "react-bootstrap";
-import "./Cart.css";
 import { Fade, Slide } from "react-awesome-reveal";
 import CartEmpty from "../CartEmpty/CartEmpty";
+import "./Cart.css";
 
 const Cart = () => {
   const { cardList, deleteProduct, totalCount, totalPrice } = useContext(CardContext);

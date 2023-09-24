@@ -1,5 +1,10 @@
 .containerDetail{
     border-radius: 20px;
+    margin-left: 0px;
+}
+
+.row{
+    margin-left: 0!important;
 }
 
 .divDetailContainer{
@@ -19,7 +24,6 @@
 .img{
     box-shadow: 0px 0px 20px 10px #666;
 }
-
 
 @media screen and (max-width: 1200px) {
     .containerDetail{
