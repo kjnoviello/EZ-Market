@@ -41,7 +41,7 @@ const ItemCount = ( {initial, stock, handleAdd}) => {
             <Button variant="secondary">Volver a la tienda</Button>
           </Link>
            { isButton && ( <Button variant="success" onClick={()=>{ handleAdd(count); handleShowToastAlert()}}>Agregar al carrito</Button> )}
-            {showToastAlert && <ToastAlert count={count}></ToastAlert>}
+            {showToastAlert && <ToastAlert count={count}></ToastAlert>}          
         </div>
     </div>
   )

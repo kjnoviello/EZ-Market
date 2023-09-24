@@ -9,21 +9,29 @@ const CardContextProvider = ({ children }) => {
     };
 
     const [cardList, setCardList] = useState([]);
-
+    
     //* funcion para agregar productos a cardList
     const addProduct = (newProduct) => {
-
+        
         // Buscar si el producto ya existe en cardList
-        const existingProductIndex = cardList.findIndex(
-        (product) => product.id === newProduct.id
-        );
-
+        const existingProductIndex = cardList.findIndex( (product) => product.id === newProduct.id );
+        
         if (existingProductIndex !== -1) {
+
             // Si el producto ya existe, actualiza la cantidad
             const updatedCardList = [...cardList];
-            updatedCardList[existingProductIndex].count += newProduct.count;
-            setCardList(updatedCardList);
+
+            // obtengo la diferencia entre lo que se acumula y el stock
+            const result = updatedCardList[existingProductIndex].stock - updatedCardList[existingProductIndex].count
+
+            // verifico que no se pueda agregar más unidades de las que hay es stock
+            newProduct.count <= result ? (updatedCardList[existingProductIndex].count += newProduct.count)  : console.log('no se puede')
+            setCardList(updatedCardList)
+            console.log('log de updateCardList', updatedCardList);
+            console.log('esto es cardList.stock',updatedCardList[existingProductIndex].stock);
+
         } else {
+            
             // Si el producto no existe, se agrega a cardList
             setCardList([...cardList, newProduct]);
         }
@@ -34,15 +42,12 @@ const CardContextProvider = ({ children }) => {
 
     //* Sumar todas las unidades
     const totalCount = () => {
-        return cardList.reduce((total, product) => total + product.count, 0);
+        return cardList.reduce( (total, product) => total + product.count, 0); 
     };
     
     //* Sumar todos los precios
     const totalPrice = () => {
-        return cardList.reduce(
-        (totalPrice, product) => totalPrice + product.precio * product.count,
-        0
-        );
+        return cardList.reduce( (totalPrice, product) => totalPrice + product.precio * product.count, 0 );
     };
 
     return (

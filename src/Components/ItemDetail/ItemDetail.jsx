@@ -2,16 +2,18 @@ import { ModalBody, ModalFooter, ModalTitle } from "react-bootstrap"
 import { useContext } from "react"
 import { CardContext } from "../../context/CartContext"
 import ItemCount from "../ItemCount/ItemCount"
+import ItemCountStock from "../ItemCountStock/ItemCountStock"
 import ('./ItemDetail.css')
 
 const ItemDetail = (products) => {
 
   const {addProduct} = useContext(CardContext)
 
-  //funcion para agregar al carrito
+  // funcion para agregar al carrito
   const handleAdd = (count)=> {
     addProduct({...products, count})
-  } 
+  }
+
     //* en la funcion handleAdd a count se le puede cambiar el nombre ya que
     //* es el nombre de un parametro y va a seguir siendo la variable count.
     //* Esto es debido a que esta funcion en itemCount tiene como parametro a count
@@ -44,8 +46,8 @@ const ItemDetail = (products) => {
             </ModalFooter>
         </div>
         <div className="col divDetailContainer contador">
-              <img className='img' src={products.imagen} />
-            <ItemCount initial={1} stock={products.stock} handleAdd={handleAdd} className="itemCount" ></ItemCount>
+            <img className='img' src={products.imagen} />
+            {products.stock === 0 ? <ItemCountStock />: <ItemCount initial={1} stock={products.stock} handleAdd={handleAdd}></ItemCount> }
         </div>
     </div>
   )
