@@ -22,7 +22,7 @@ const Cart = () => {
     return  <CartEmpty />
   } else {
     return (
-      <div className="container-lg row bg-white">
+      <div className="container-lg row bg-white containerCart">
         <div className="product-list">
           <Fade cascade triggerOnce="true">
           <ul>

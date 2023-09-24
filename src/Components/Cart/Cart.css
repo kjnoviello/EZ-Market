@@ -2,6 +2,10 @@
   margin-top: 20px;
 }
 
+.containerCart{
+  border-radius: 20px;
+}
+
 .product-list {
   width: 60%;
   float: left;
