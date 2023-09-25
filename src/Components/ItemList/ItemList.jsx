@@ -1,14 +1,12 @@
+import { Fade } from 'react-awesome-reveal';
 import PropTypes from 'prop-types'
 import Item from "../Item/Item"
-import { Fade } from 'react-awesome-reveal';
-
 
 const ItemList = ({products}) => {
   
   ItemList.propTypes = {
     products: PropTypes.array.isRequired,
   };
-
 
   return (  
         <>

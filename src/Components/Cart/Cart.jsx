@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import { CardContext } from "../../context/CartContext";
 import { Button } from "react-bootstrap";
-import { Fade, Slide } from "react-awesome-reveal";
-import CartEmpty from "../CartEmpty/CartEmpty";
+import { Fade} from "react-awesome-reveal";
+import CartEmpty from "./CartEmpty/CartEmpty";
 import "./Cart.css";
+import CartImage from "./CartImage/CartImage";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cardList, deleteProduct, totalCount, totalPrice } = useContext(CardContext);
@@ -26,31 +28,60 @@ const Cart = () => {
         <div className="product-list">
           <Fade cascade triggerOnce="true">
           <ul>
-            <li  id="productList">
-              <div>
-                <h5><strong>Cantidad total: {totalCount()}u.</strong></h5>
-              </div>
-              <div>
-                <h5><strong>Precio total: ${totalPrice()}</strong></h5>
+            <h2 className="cartText">Lista de compra</h2>
+            <li  id="productID">
+              <div className="productIDContainer">
+                <div className="div4  div4Text">
+                  <h6>Productos</h6>
+                </div>
+                <div className="div4">
+                  <div className="div5 divText">
+                    <h6>Cantidad</h6>
+                  </div>
+                  <div className="div5 divText">
+                    <h6>Precio</h6>
+                  </div>
+                  <div className="div5 divText">
+                    <h6><strong></strong></h6>
+                  </div>
+                  <div className="div5 divText">
+                    <h6><strong></strong></h6>
+                  </div>
+                </div>
               </div>
             </li>
             {cardList.map((product) => (
               <>
               <li id="productID" key={product.id}>
-                <div className="productID-divP">
-                  <p><strong>{product.titulo}</strong></p>
-                  <p><strong>{product.count}u.</strong></p>
-                  <p><strong>$ {product.precio}</strong></p>
-                </div>
-                <div className="productID-divBtn">
-                  <Button variant="success" onClick={() => handleShowDetails(product)}>
-                    Ver Detalles
-                  </Button>
-                  <Button variant="dark" onClick={()=>{deleteProduct(product.id); handleCloseDetails()}}>X</Button>
+                <div className="productIDContainer">
+                  <div className="div4">
+                    <div>
+                      <CartImage imagen={product.imagen}></CartImage>
+                    </div>
+                    <div>
+                      <p><strong>{product.titulo}</strong></p>
+                      <p>{product.categoria}</p>
+                    </div>
+                  </div>
+                  <div className="div4">
+                    <div className="div5">
+                      <p>{product.count}</p>
+                    </div>
+                    <div className="div5">
+                      <p>$ {product.precio}</p>
+                    </div>
+                    <div className="div5">
+                      <Button variant="secondary" onClick={() => handleShowDetails(product)}>
+                        Ver Detalles
+                      </Button>
+                      <Button variant="dark" onClick={()=>{deleteProduct(product.id); handleCloseDetails()}}>X</Button>
+                    </div>
+                  </div>
                 </div>
               </li>
               </>
             ))}
+            
           </ul>
           </Fade>
         </div>
@@ -58,8 +89,7 @@ const Cart = () => {
             {selectedProduct && (
               <>
                 <Fade triggerOnce="true">
-                <Slide direction="down" triggerOnce="true">
-                <h2>Detalles del Producto</h2>
+                  <h2>Detalles del Producto</h2>
                   <div className="detalleDiv">
                     <div className="imgDiv ">
                         <img className='img' src={selectedProduct.imagen} alt="" />
@@ -70,16 +100,33 @@ const Cart = () => {
                       <p><em>Descripción: {selectedProduct.descripcion}</em></p>
                     </div>
                   </div>
-                </Slide>
-                <Button variant="success" onClick={handleCloseDetails}>
+                  <Button variant="success" onClick={handleCloseDetails}>
                   Cerrar Detalles
-                </Button>
-              </Fade>
+                  </Button>
+                </Fade>
               </>
             )}
           </div>
-      </div>
-    );
+          <li  id="productID">
+              <div className="productIDContainer">
+                <div className="totalBtn">
+                  <Button variant="outline-success ">Vaciar carrito</Button>
+                  <Link to="/Productos"><Button variant="outline-success">Seguir comprando</Button></Link>
+                </div>
+                <div className="total">
+                  <p><strong>Cantidad total: </strong>{totalCount()}u.</p>
+                  <p><strong>Subtotal: </strong>${totalPrice()}</p>
+                  <p><strong>Gastos de envio: </strong><i><s>$ 1200.00</s></i></p>
+                  <hr />
+                  <h3><strong>Total: </strong>${totalPrice()}</h3>
+                  <hr />
+                  <Button variant="success">Finalizar compra</Button>
+
+                </div>
+              </div>
+            </li>
+        </div>
+      );
   }
 }
 

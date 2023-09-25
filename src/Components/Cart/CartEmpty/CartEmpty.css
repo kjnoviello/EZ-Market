@@ -1,10 +1,19 @@
+.containerCartEmpty{
+  width: 100%;
+}
+
 .container-lg {
     margin-top: 20px;
+}
+
+.containerRow{
+    margin-left: 0!important;
 }
 
 .btnVolverCarrito{
     margin: 20px;
 }
+
 .shake-horizontal {
 -webkit-animation: shake-horizontal 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
         animation: shake-horizontal 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
