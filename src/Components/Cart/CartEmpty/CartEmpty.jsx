@@ -5,9 +5,8 @@ import ('./CartEmpty.css')
 
 const CartEmpty = () => {
   return (
-    <div className='containerCartEmpty'>
-        <Fade >
-        <div className="container-lg row bg-white containerDetail containerRow">
+    <div className="container-lg row bg-white border">
+        <Fade>
             <br />
             <h2>Tu carrito está vacio</h2>
             <div className="imgCarritoVacio shake-horizontal">
@@ -16,13 +15,12 @@ const CartEmpty = () => {
             <hr />
             <div>
                 <Link to="/Productos">
-                    <Button variant="success" className="btnVolverCarrito">Volver a tienda</Button>
+                    <Button variant="success" className="btnVolverCarrito">Volver a la tienda</Button>
                 </Link>
                 <Link to="/Categoria/novedad">
                     <Button variant="success" className="btnVolverCarrito">Ir a novedades</Button>
                 </Link>
             </div>  
-        </div>
         </Fade>
     </div>
   )

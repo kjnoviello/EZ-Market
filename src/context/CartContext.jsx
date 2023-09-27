@@ -66,6 +66,7 @@ const CardContextProvider = ({ children }) => {
         order.buyer = {Name: 'Kevin', Phone: 341, Email: 'kj@gmail.com'}
         order.items = cardList.map(prod => ({id: prod.id, titulo: prod.titulo, cantidad: prod.count, precio: prod.precio}))
         order.total = totalPrice()
+        order.date = Date()
         console.log('esta es la orden que genera', order)
 
         

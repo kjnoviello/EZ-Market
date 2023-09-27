@@ -34,15 +34,15 @@ const ItemCount = ( {initial, stock, handleAdd}) => {
   return (
     <div className='divItemCount'>
         <div className='left'>
-          <Button variant="secondary" onClick={handleDecrementCount}>-1</Button>
+          <Button variant="secondary" onClick={handleDecrementCount}><i className="ri-subtract-line"></i>1</Button>
           <label>{count}</label>
-          <Button variant="secondary" onClick={handleIncrementCount}>+1</Button>
+          <Button variant="secondary" onClick={handleIncrementCount}><i className="ri-add-line"></i>1</Button>
         </div>
         <div>
           <Link to="/Productos">
-            <Button variant="secondary">Volver a la tienda</Button>
+            <Button variant="secondary"><i className="ri-arrow-go-back-line icon"></i>Volver</Button>
           </Link>
-           { isButton && ( <Button variant="success" onClick={()=>{ handleAdd(count); handleShowToastAlert()}}>Agregar al carrito</Button> )}
+           { isButton && ( <Button variant="success" onClick={()=>{ handleAdd(count); handleShowToastAlert()}}><i className="ri-shopping-cart-line icon"></i>Agregar </Button> )}
             {showToastAlert && <ToastAlert count={count}></ToastAlert>}          
         </div>
     </div>

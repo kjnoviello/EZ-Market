@@ -6,11 +6,6 @@ function CarouselSlider() {
     <Carousel fade>
       <Carousel.Item>
         <img src='/banner01.png' alt='Banner 1' className='img-fluid' />
-        {/* <ExampleCarouselImage text="First slide" /> */}
-        {/* <Carousel.Caption>
-          <h3 className='h3Custom'>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption> */}
       </Carousel.Item>
       <Carousel.Item>
         <img src='/banner02.png' alt='Banner 2' className='img-fluid' />

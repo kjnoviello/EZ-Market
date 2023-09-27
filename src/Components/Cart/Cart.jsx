@@ -28,8 +28,8 @@ const Cart = () => {
         <div className="product-list">
           <Fade cascade triggerOnce="true">
           <ul>
-            <h2 className="cartText">Lista de compra</h2>
-            <li  id="productID">
+            <h2 className="cartText">Orden de compra</h2>
+            <li  id="productID" key={'list'}>
               <div className="productIDContainer">
                 <div className="div4  div4Text">
                   <h6>Productos</h6>
@@ -51,7 +51,6 @@ const Cart = () => {
               </div>
             </li>
             {cardList.map((product) => (
-              <>
               <li id="productID" key={product.id}>
                 <div className="productIDContainer">
                   <div className="div4">
@@ -72,23 +71,23 @@ const Cart = () => {
                     </div>
                     <div className="div5">
                       <Button variant="secondary" onClick={() => handleShowDetails(product)}>
-                        Ver Detalles
+                        <i className="ri-eye-line"></i>
                       </Button>
-                      <Button variant="dark" onClick={()=>{deleteProduct(product.id); handleCloseDetails()}}>X</Button>
+                      <Button variant="dark" onClick={()=>{deleteProduct(product.id); handleCloseDetails()}}>
+                      <i className="ri-delete-back-2-line"></i>
+                      </Button>
                     </div>
                   </div>
                 </div>
               </li>
-              </>
             ))}
-            
           </ul>
           </Fade>
         </div>
           <div className="product-details">
-            {selectedProduct && (
-              <>
-                <Fade triggerOnce="true">
+            <Fade triggerOnce="true">
+              {selectedProduct && (
+                <>
                   <h2>Detalles del Producto</h2>
                   <div className="detalleDiv">
                     <div className="imgDiv ">
@@ -100,18 +99,21 @@ const Cart = () => {
                       <p><em>Descripción: {selectedProduct.descripcion}</em></p>
                     </div>
                   </div>
-                  <Button variant="success" onClick={handleCloseDetails}>
-                  Cerrar Detalles
+                  <Button variant="secondary" onClick={handleCloseDetails}>
+                    <i className="ri-close-line"></i>
                   </Button>
-                </Fade>
-              </>
-            )}
+                </>
+              )}
+            </Fade>
           </div>
           <li  id="productID">
               <div className="productIDContainer">
                 <div className="totalBtn">
-                  <Button variant="outline-success" onClick={clearCart}>Vaciar carrito</Button>
-                  <Link to="/Productos"><Button variant="outline-success">Seguir comprando</Button></Link>
+                  <Link to="/Productos">
+                    <Button variant="outline-success"><i className="ri-shopping-bag-line icon"></i>Seguir comprando</Button>
+                  </Link>
+                  <Button variant="outline-success" onClick={clearCart}>
+                  <i className="ri-delete-bin-7-line icon"></i>Vaciar carrito</Button>
                 </div>
                 <div className="total">
                   <p><strong>Cantidad total: </strong>{totalCount()}u.</p>
@@ -120,8 +122,7 @@ const Cart = () => {
                   <hr />
                   <h3><strong>Total: </strong>${totalPrice()}</h3>
                   <hr />
-                  <Button variant="success" onClick={handleOrders}>Realizar orden</Button>
-
+                  <Button variant="success" onClick={handleOrders}><i className="ri-checkbox-circle-line icon"></i>Realizar orden</Button>
                 </div>
               </div>
             </li>
@@ -130,6 +131,4 @@ const Cart = () => {
   }
 }
 
-
 export default Cart;
-

@@ -31,7 +31,6 @@
 #productID {
   border-bottom: 1px solid #ccc;
   margin: 30px;
-  /* padding: 10px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +53,6 @@
 
 .div4Text{
   justify-content: start;
-  /* margin-left: 40px; */
 }
 
 .div4 div{
@@ -89,7 +87,6 @@
 .totalBtn{
   display: flex;
   flex-direction: column;
-  /* margin: 20px; */
   align-self: center;
 }
 
@@ -99,7 +96,9 @@
   font-weight: 500;
 }
 
-
+.icon{
+  padding: 5px;
+}
 
 .product-details {
   width: 40%;

@@ -17,7 +17,7 @@ function Item(datos) {
 				${datos.precio}
 			</Card.Title>
 			<Link to={`/Detalle/${datos.id}`}>
-				<Button variant="success">Más info</Button>
+				<Button variant="success"><i className="ri-information-line icon"></i>Más info</Button>
 			</Link>
 			</Card.Body>
 		</Card>

@@ -1,13 +1,9 @@
-.containerCartEmpty{
-  width: 100%;
-}
-
 .container-lg {
     margin-top: 20px;
 }
 
-.containerRow{
-    margin-left: 0!important;
+.border{
+  border-radius: 20px;
 }
 
 .btnVolverCarrito{
