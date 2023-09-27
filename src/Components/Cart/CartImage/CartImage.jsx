@@ -1,6 +1,9 @@
 import Figure from 'react-bootstrap/Figure';
 
+
+// eslint-disable-next-line react/prop-types
 function CartImage({imagen}) {
+
   return (
     <Figure>
       <Figure.Image

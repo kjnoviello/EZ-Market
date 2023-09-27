@@ -19,14 +19,18 @@ TAREAS:
 
 - Agregar condicionales 1 mas
 
-- limitar la compra en Cart al stock del producto
+- limitar la compra en Cart al stock del producto (toast o sweet alert)
 
-- vaciar carrito????
-
-- establecer la conexion con firebase
+- formulario de contacto (arreglar)
 
 - formulario de compra con firebase (clase firebase 02)
 
+- eliminar todos los warning
+
+- optimizar codigo y eliminar comentatios
+
 - (ocional) agregar la busqueda indexada en vivo
 
-- (opcional) componente de LogIn
+- (opcional) componente de LogIn para que admin actualice el stock, por ejemplo
+
+- (opcional) ver los requisitos para el 10 y el destacado

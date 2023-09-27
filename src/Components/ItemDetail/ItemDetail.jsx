@@ -7,7 +7,7 @@ import ('./ItemDetail.css')
 
 const ItemDetail = (products) => {
 
-  const {addProduct} = useContext(CardContext)
+  const { addProduct } = useContext(CardContext)
 
   // funcion para agregar al carrito
   const handleAdd = (count)=> {

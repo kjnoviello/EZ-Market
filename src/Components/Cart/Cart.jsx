@@ -1,14 +1,14 @@
 import { useContext, useState } from "react";
 import { CardContext } from "../../context/CartContext";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { Fade} from "react-awesome-reveal";
 import CartEmpty from "./CartEmpty/CartEmpty";
-import "./Cart.css";
 import CartImage from "./CartImage/CartImage";
-import { Link } from "react-router-dom";
+import "./Cart.css";
 
 const Cart = () => {
-  const { cardList, deleteProduct, totalCount, totalPrice } = useContext(CardContext);
+  const { cardList, deleteProduct, totalCount, totalPrice, clearCart, handleOrders } = useContext(CardContext);
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -110,7 +110,7 @@ const Cart = () => {
           <li  id="productID">
               <div className="productIDContainer">
                 <div className="totalBtn">
-                  <Button variant="outline-success ">Vaciar carrito</Button>
+                  <Button variant="outline-success" onClick={clearCart}>Vaciar carrito</Button>
                   <Link to="/Productos"><Button variant="outline-success">Seguir comprando</Button></Link>
                 </div>
                 <div className="total">
@@ -120,7 +120,7 @@ const Cart = () => {
                   <hr />
                   <h3><strong>Total: </strong>${totalPrice()}</h3>
                   <hr />
-                  <Button variant="success">Finalizar compra</Button>
+                  <Button variant="success" onClick={handleOrders}>Realizar orden</Button>
 
                 </div>
               </div>
