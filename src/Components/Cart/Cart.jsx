@@ -30,8 +30,8 @@ const Cart = () => {
             <ul>
               <h2 className="cartText">Orden de compra</h2>
               <li id="productID" key={'list'}>
-                <div className="productIDContainer">
-                  <div className="div4  div4Text">
+                <div className="productIDContainer" id="productContainerHeader">
+                  <div className="div4 div4Text">
                     <h6>Productos</h6>
                   </div>
                   <div className="div4">

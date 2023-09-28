@@ -25,10 +25,10 @@ const CartItems = ( {handleShowDetails, handleCloseDetails} ) => {
 						</div>
 						<div className="div4">
 							<div className="div5">
-								<p>{product.count}</p>
+								<p>{product.count}u.</p>
 							</div>
 							<div className="div5">
-								<p>$ {product.precio}</p>
+								<p>${product.precio}</p>
 							</div>
 							<div className="div5">
 								<Button variant="secondary" onClick={() => handleShowDetails(product)}>

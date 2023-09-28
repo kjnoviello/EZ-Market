@@ -32,6 +32,7 @@
   border-bottom: 1px solid #ccc;
   margin: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-shrink:unset;
@@ -63,7 +64,6 @@
   width: 20%;
   display: flex;
   justify-content: flex-end;
-  /* align-items: center; */
   margin-inline: 20px;
 }
 
@@ -120,20 +120,6 @@
   margin-block: 15px;
 }
 
-/* .btnVolverCarrito{
-margin: 20px;
-} */
-/* 
-li{
-  display: flex;
-  justify-content: center;
-} */
-
-/* #divLi{
-  display: flex;
-  flex-direction: column;
-} */
-
 .detalleDiv{
 display: flex;
 padding: 20px;
@@ -145,33 +131,11 @@ width: 300px;
 height: 300px;
 }
 
-
-/* #productID div{
-  display: flex;
-  width: 70%;
-
-  justify-content: space-between;
-} */
-/* .divin{
-  width: 33%;
-} */
-
-/* .productID-divP{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+.rowForm{
+  justify-content: center;
+  row-gap: 40px;
+  margin: 20px !important;
 }
-
-.productID-divBtn{
-  display: flex;
-  width: 70%;
-
-  justify-content: left;
-}
-
-.productID-divBtn button{
-  margin-inline: 10px;
-} */
 
  /* responsive */
 @media (min-width: 768px) {
@@ -187,12 +151,28 @@ height: 300px;
   .product-details {
     width: 40%;
   }
+
+}
+
+@media (max-width: 768px) {
+  .productIDContainer{
+    flex-direction: column;
+  }
+  #productContainerHeader{
+    display: none;
+  }
+  .div4{
+    width: auto;
+    justify-content: center;
+  }
+  .div5{
+    margin-inline: 5px;
+    margin-bottom: 20px;
+  }
+  
 }
 
 @media (max-width: 1200px) {
-  /* .detalleDiv {
-    display: initial;
-  } */
   .imgDiv{
     width:auto;
     height: 300px;
@@ -212,20 +192,15 @@ height: 300px;
     justify-content: center;
     width: max-content;
   }
+  #productID{
+    margin: 0px;
+  }
+  .col-md-5 input {
+    width: 220px;
+  }
 }
 
 @media (max-width: 992px) {
-  /* #productID {
-    display: flex;
-    flex-direction: column;
-  }
-  .productID-divP p{
-    padding-inline: 10px;
-  }
-  .productID-divP{
-    display: flex;
-    width: 100%;
-  } */
   p{
     font-size: 14px;
     font-weight: 500;

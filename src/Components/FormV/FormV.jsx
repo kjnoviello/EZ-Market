@@ -51,7 +51,9 @@ function FormExample() {
               aria-describedby="inputGroupPrepend"
               required
             />
-            
+             <Form.Control.Feedback type="invalid">
+            Ingrese un nombre válido.
+          </Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
       </Row>
@@ -59,16 +61,25 @@ function FormExample() {
         <Form.Group as={Col} md="6" controlId="validationCustom03">
           <Form.Label>City</Form.Label>
           <Form.Control as="textarea" rows={3} required />
+          <Form.Control.Feedback type="invalid">
+            Ingrese un nombre válido.
+          </Form.Control.Feedback>
           
         </Form.Group>
         <Form.Group as={Col} md="3" controlId="validationCustom04">
           <Form.Label>State</Form.Label>
           <Form.Control type="text" placeholder="State" required />
+          <Form.Control.Feedback type="invalid">
+            Ingrese un nombre válido.
+          </Form.Control.Feedback>
          
         </Form.Group>
         <Form.Group as={Col} md="3" controlId="validationCustom05">
           <Form.Label>Zip</Form.Label>
           <Form.Control type="text" placeholder="Zip" required />
+          <Form.Control.Feedback type="invalid">
+            Ingrese un nombre válido.
+          </Form.Control.Feedback>
           
         </Form.Group>
       </Row>
