@@ -1,4 +1,3 @@
-// import { useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { Button } from 'react-bootstrap';
 import Tab from 'react-bootstrap/Tab';
@@ -6,9 +5,6 @@ import Tabs from 'react-bootstrap/Tabs';
 import ('./Contact.css')
 
 function Contact() {
-
-  // const refInput = useRef(null)
-  // const btnClick = () => refInput.current.focus()
 
   return (
     <div className="container-lg row bg-white divContact">
@@ -68,9 +64,6 @@ function Contact() {
               <Button variant="success" type='submit'>Enviar</Button>
           </div>
         </Tab>
-        {/* <Tab eventKey="contact" title="Contact" disabled>
-          Tab content for Contact
-        </Tab> */}
       </Tabs>
     </div>
   );

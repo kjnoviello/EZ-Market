@@ -1,76 +1,56 @@
-import { CardContext } from '../../../context/CartContext'; 
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
+import { CardContext } from '../../../context/CartContext';
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import { Link } from 'react-router-dom';
 
-function CartForm() {
 
-  const { handleOrders } = useContext(CardContext);
+function CartForm(dataForm) {
+  const { handleOrders, handleOnChange } = useContext(CardContext);
+  
 
-  const [validated, setValidated] = useState(false);
+    const handleSubmit = (event) => {
+        console.log(dataForm);
+        if(dataForm !== ''){
+            event.preventDefault(); 
+            handleOrders();
+        }
+    };
 
-  const handleSubmit = async (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-        setValidated(true);
-    } else {
-       await handleOrders()
-        event.preventDefault();
-    }
-  };
-
-  return (
-    <Form noValidate validated={validated} onSubmit={handleSubmit} className="productIDContainer">
-        <Row className='rowForm'>
-            <Form.Group as={Col} md="5" controlId="validationCustom01">
-                <Form.Label>Name</Form.Label>
-                <Form.Control
-                    required
-                    type="text"
-                    placeholder="First name"
-                    defaultValue=""
-                />
-                <Form.Control.Feedback type="invalid">
-                    Ingrese un nombre válido.
-                </Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group as={Col} md="5" controlId="validationCustom03">
-                <Form.Label>Teléfono</Form.Label>
-                <Form.Control
-                    required
-                    type="tel"
-                    placeholder="Teléfono"
-                    defaultValue=""
-                    pattern="[0-9]{0-10}"
-                />
-                <Form.Control.Feedback type="invalid">
-                    Ingrese un número de teléfono válido.
-                </Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group as={Col} md="10" controlId="validationCustom02">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                    required
-                    type="email"
-                    placeholder="Email"
-                    defaultValue=""
-                />
-                <Form.Control.Feedback type="invalid">
-                    Ingrese un email válido.
-                </Form.Control.Feedback>
-            </Form.Group>
-            {/* <Link to="/OrderConfirm"> */}
-                <Button variant="success" type="submit" >
-                    <i className="ri-checkbox-circle-line icon"></i>Confirmar compra
-                </Button>
-            {/* </Link> */}
-        </Row>
-    </Form>
+    return (
+    
+    <>
+    <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+            <label className="form-label">Email address</label>
+            <input 
+            type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            name= 'email' 
+            value={dataForm.email}
+            onChange={handleOnChange}
+            />
+            <div id="emailHelp" className="form-text">We never share your email with anyone else.</div>
+        </div>
+        <div className="mb-3">
+            <label  className="form-label">phone</label>
+            <input type="tel" className="form-control" id="exampleInputPassword1" 
+            name= 'phone'
+            value={dataForm.phone}
+            onChange={handleOnChange}
+            />
+        </div>
+        <div className="mb-3">
+            <label  className="form-label">name</label>
+            <input type="text" className="form-control" id="exampleInputPassword1" 
+            name= 'name'
+            value={dataForm.name}
+            onChange={handleOnChange}
+            />
+        </div>
+        <Button variant="success" type="submit" >
+            <i className="ri-check-line icon"></i>Confirmar mi compra
+        </Button>
+    </form>
+    </>
+    
   );
 }
 

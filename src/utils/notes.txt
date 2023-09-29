@@ -17,8 +17,6 @@ color backgroud: #198754
 
 TAREAS:
 
-- Agregar condicionales 1 mas
-
 - limitar la compra en Cart al stock del producto (toast o sweet alert)
 
 - formulario de contacto (arreglar)

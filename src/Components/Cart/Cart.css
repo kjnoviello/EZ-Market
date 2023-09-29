@@ -142,16 +142,13 @@ height: 300px;
   .container-lg {
     flex-wrap: nowrap;
   }
-
   .product-list {
     width: 60%;
     margin-bottom: 0;
   }
-
   .product-details {
     width: 40%;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -164,12 +161,12 @@ height: 300px;
   .div4{
     width: auto;
     justify-content: center;
+    margin-top: 5px;
   }
   .div5{
     margin-inline: 5px;
     margin-bottom: 20px;
   }
-  
 }
 
 @media (max-width: 1200px) {

@@ -9,8 +9,24 @@ const CardContextProvider = ({ children }) => {
         children: PropTypes.object.isRequired,
     };
 
+
+
+    // TODO inicio de datos de cartForm
+    const [dataForm, setDataform] = useState({
+        name: '',
+        phone: '',
+        email: ''
+    })
+
+    const [id, setId] = useState('') 
+    console.log('log de id del useState', id);
+
+    // TODO fin de datos de cartForm
     const [cardList, setCardList] = useState([]);
     
+
+
+
     //* funcion para agregar productos a cardList
     const addProduct = (newProduct) => {
         
@@ -63,20 +79,42 @@ const CardContextProvider = ({ children }) => {
 
         /* The code is creating an order object with the buyer information, items in the cart, and the
         total price. */
-        order.buyer = {Name: 'Kevin', Phone: 341, Email: 'kj@gmail.com'}
+        order.buyer = dataForm
         order.items = cardList.map(prod => ({id: prod.id, titulo: prod.titulo, cantidad: prod.count, precio: prod.precio}))
         order.total = totalPrice()
         order.date = Date()
         console.log('esta es la orden que genera', order)
 
         
-        /* This code is creating a new document in the "orders" collection of the Firestore database. */
         const ordersCollection = collection(queryDB, 'orders')
         addDoc(ordersCollection, order)
-        .then(resp => console.log(resp))
+        .then(({id}) => {setId(id)
+            console.log(id)})
         .catch(err => console.log(err))
-        .finally(()=>{console.log('Orden creada correctamente')})
+        .finally(()=>{
+            setDataform(
+                {name:'',
+                phone:'',
+                email:''}
+            )
+            setTimeout(() => {
+                clearCart()
+               
+              }, "2000");
+        })
     } 
+
+
+    const handleOnChange = (evt) => {
+        setDataform({
+            ...dataForm,
+            [evt.target.name] : evt.target.value
+        })
+        console.log(dataForm);
+    }
+
+
+
 
     // funcion para actualizar un producto --- ID ESTA HARDCODEADO!!!!!!! SE DEBE HACER DINAMICO
     const handleUpdateProduct = () => {
@@ -104,7 +142,6 @@ const CardContextProvider = ({ children }) => {
         .finally(() => console.log('Productos actualizados en masa correctamente'))
     }
 
-
     return (
         <CardContext.Provider value={{
             cardList,
@@ -116,6 +153,9 @@ const CardContextProvider = ({ children }) => {
             handleOrders,
             handleUpdateProduct,
             handleUpdateBatchProduct,
+            handleOnChange,
+            dataForm,
+            id
         }}>
             {children}
         </CardContext.Provider>

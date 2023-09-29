@@ -8,7 +8,7 @@ import CartSummary from "./CartSummary/CartSummary";
 import "./Cart.css";
 
 const Cart = () => {
-  const { cardList } = useContext(CardContext);
+  const { cardList, id } = useContext(CardContext);
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -20,10 +20,14 @@ const Cart = () => {
     setSelectedProduct(null);
   };
 
+console.log(id);
+
   if (cardList.length === 0) {
     return <CartEmpty />;
+  } else if(id != '') {
+    return <div className="container-lg row bg-white divContact"><h3>orden generada {id}</h3></div>
   } else {
-    return (
+    return (  
       <div className="container-lg row bg-white containerCart">
         <div className="product-list">
           <Fade cascade triggerOnce="true">
@@ -64,5 +68,6 @@ const Cart = () => {
     );
   }
 }
+
 
 export default Cart;

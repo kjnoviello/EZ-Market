@@ -10,7 +10,6 @@ import Main from './Components/Main/Main';
 import Cart from './Components/Cart/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import OrderConfirm from './Components/OrderConfirm/OrderConfirm';
 
 
 function App() {
@@ -42,9 +41,6 @@ function App() {
           <Route path='/Cart' element={<Main titulo={"Tu carrito"}>
                                               <Cart/>
                                             </Main>}/>
-          <Route path='/OrderConfirm' element={<OrderConfirm titulo={"Tu carrito"}>
-            <Cart/>
-          </OrderConfirm>}/>
         </Routes>
         <Footer/>
       </CardContextProvider>
