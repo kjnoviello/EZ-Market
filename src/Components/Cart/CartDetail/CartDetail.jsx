@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
+import { Fade } from "react-awesome-reveal"
 import { Button } from "react-bootstrap"
 
 const CartDetail = ({ handleCloseDetails, selectedProduct }) => {
 	
 	return (
 		<>
+		<Fade>
 			{selectedProduct && (
 				<>
 					<h2>Detalles del Producto</h2>
@@ -23,6 +25,7 @@ const CartDetail = ({ handleCloseDetails, selectedProduct }) => {
 					</Button>
 				</>
 			)}
+		</Fade>
 		</>
 	)
 }

@@ -6,6 +6,7 @@ import CartItems from "./CartItems/CartItems";
 import CartDetail from "./CartDetail/CartDetail";
 import CartSummary from "./CartSummary/CartSummary";
 import "./Cart.css";
+import OrderConfirm from "../OrderConfirm/OrderConfirm";
 
 const Cart = () => {
   const { cardList, id } = useContext(CardContext);
@@ -20,12 +21,10 @@ const Cart = () => {
     setSelectedProduct(null);
   };
 
-console.log(id);
-
   if (cardList.length === 0) {
     return <CartEmpty />;
   } else if(id != '') {
-    return <div className="container-lg row bg-white divContact"><h3>orden generada {id}</h3></div>
+    return <OrderConfirm></OrderConfirm>
   } else {
     return (  
       <div className="container-lg row bg-white containerCart">

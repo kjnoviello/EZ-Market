@@ -8,10 +8,10 @@ const CartEmpty = () => {
     <div className="container-lg row bg-white border">
         <Fade>
             <br />
-            <h2>Tu carrito está vacio</h2>
             <div className="imgCarritoVacio shake-horizontal">
                 <img src="carritoVacio.png" alt="carrito_vacio" />
             </div>
+            <h2>Tu carrito está vacio</h2>
             <hr />
             <div>
                 <Link to="/Productos">

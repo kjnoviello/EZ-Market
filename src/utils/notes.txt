@@ -19,9 +19,11 @@ TAREAS:
 
 - limitar la compra en Cart al stock del producto (toast o sweet alert)
 
-- formulario de contacto (arreglar)
+- Validar el formulario de contacto y de orden
 
-- formulario de compra con firebase (clase firebase 02)
+- diseñar el componente de orden generada con id
+
+- hacer un orderContext
 
 - eliminar todos los warning
 

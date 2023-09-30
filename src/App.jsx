@@ -6,6 +6,7 @@ import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import QuienesSomos from './Components/QuienesSomos/QuienesSomos';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import Contact from './Components/Contact/Contact';
+import OrderConfirm from './Components/OrderConfirm/OrderConfirm';
 import Main from './Components/Main/Main';
 import Cart from './Components/Cart/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -40,6 +41,9 @@ function App() {
                                             </Main>}/>
           <Route path='/Cart' element={<Main titulo={"Tu carrito"}>
                                               <Cart/>
+                                            </Main>}/>
+          <Route path='/OrderConfirm' element={<Main titulo={"Resumen de la compra"}>
+                                              <OrderConfirm/>
                                             </Main>}/>
         </Routes>
         <Footer/>

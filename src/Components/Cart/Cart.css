@@ -131,11 +131,72 @@ width: 300px;
 height: 300px;
 }
 
-.rowForm{
-  justify-content: center;
-  row-gap: 40px;
-  margin: 20px !important;
+  /* cartForm */
+.containerForm {
+  background-color: #ffffff;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */ 
+  padding: 40px;
+  width: 600px;
 }
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  min-height: 70px;
+  max-width: 100%;
+}
+
+.label {
+  font-size: 24px;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  color: black;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #252424;
+  font-size: 16px;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border-bottom: 2px solid #157347;
+  outline: none;
+}
+
+input[type="text"]:focus + label,
+input[type="email"]:focus + label,
+input[type="tel"]:focus + label {
+  color: #157347;
+  transform: translateY(-25px);
+  font-size: 14px;
+}
+
+
+
+
 
  /* responsive */
 @media (min-width: 768px) {
@@ -158,6 +219,10 @@ height: 300px;
   #productContainerHeader{
     display: none;
   }
+  #productID{
+    margin: 5px;
+  }
+
   .div4{
     width: auto;
     justify-content: center;
@@ -167,6 +232,12 @@ height: 300px;
     margin-inline: 5px;
     margin-bottom: 20px;
   }
+  .containerForm {
+    width: 400px;
+  }
+  .detalleDiv{
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -174,6 +245,13 @@ height: 300px;
     width:auto;
     height: 300px;
     }
+  }
+  
+@media (max-width: 992px) {
+  p{
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 
 @media (max-width: 480px) {
@@ -195,13 +273,18 @@ height: 300px;
   .col-md-5 input {
     width: 220px;
   }
-}
-
-@media (max-width: 992px) {
-  p{
-    font-size: 14px;
-    font-weight: 500;
+  .total{
+    padding: 20px;
+  }
+  .containerForm {
+    width: 280px;
+    padding: 20px;
+  }
+  .label{
+    font-size: 16px;
   }
 }
+
+
 
   

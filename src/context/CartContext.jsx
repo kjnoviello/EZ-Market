@@ -9,24 +9,15 @@ const CardContextProvider = ({ children }) => {
         children: PropTypes.object.isRequired,
     };
 
-
-
-    // TODO inicio de datos de cartForm
     const [dataForm, setDataform] = useState({
         name: '',
         phone: '',
         email: ''
     })
-
     const [id, setId] = useState('') 
-    console.log('log de id del useState', id);
-
-    // TODO fin de datos de cartForm
     const [cardList, setCardList] = useState([]);
+
     
-
-
-
     //* funcion para agregar productos a cardList
     const addProduct = (newProduct) => {
         
@@ -70,6 +61,7 @@ const CardContextProvider = ({ children }) => {
     // vaciar carrito
     const clearCart = () => {
         setCardList([])
+        setId('')
     }
 
     // funcion generadora de orden
@@ -91,17 +83,7 @@ const CardContextProvider = ({ children }) => {
         .then(({id}) => {setId(id)
             console.log(id)})
         .catch(err => console.log(err))
-        .finally(()=>{
-            setDataform(
-                {name:'',
-                phone:'',
-                email:''}
-            )
-            setTimeout(() => {
-                clearCart()
-               
-              }, "2000");
-        })
+        .finally(()=>{})
     } 
 
 
@@ -110,7 +92,7 @@ const CardContextProvider = ({ children }) => {
             ...dataForm,
             [evt.target.name] : evt.target.value
         })
-        console.log(dataForm);
+        console.log(dataForm)
     }
 
 
@@ -163,4 +145,3 @@ const CardContextProvider = ({ children }) => {
 };
 
 export default CardContextProvider;
-
