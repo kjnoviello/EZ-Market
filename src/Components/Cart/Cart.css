@@ -120,6 +120,12 @@
   margin-block: 15px;
 }
 
+.detailBtn{
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
 .detalleDiv{
 display: flex;
 padding: 20px;

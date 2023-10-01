@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Fade } from "react-awesome-reveal"
 import { Button } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 const CartDetail = ({ handleCloseDetails, selectedProduct }) => {
 	
@@ -20,9 +21,16 @@ const CartDetail = ({ handleCloseDetails, selectedProduct }) => {
 							<p><em>Descripción: {selectedProduct.descripcion}</em></p>
 						</div>
 					</div>
-					<Button variant="secondary" onClick={handleCloseDetails}>
-						<i className="ri-close-line"></i>
-					</Button>
+					<div className="detailBtn">
+						<Link to={`/Detalle/${selectedProduct.id} `}>
+							<Button variant="secondary" onClick={handleCloseDetails}>
+							<i className="ri-search-line icon">Ver artículo</i>
+							</Button>
+						</Link>
+						<Button variant="secondary" onClick={handleCloseDetails}>
+							<i className="ri-close-line icon">Cerrar</i>
+						</Button>
+					</div>
 				</>
 			)}
 		</Fade>

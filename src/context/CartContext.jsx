@@ -35,13 +35,29 @@ const CardContextProvider = ({ children }) => {
             // verifico que no se pueda agregar más unidades de las que hay es stock
             newProduct.count <= result ? (updatedCardList[existingProductIndex].count += newProduct.count)  : alert(`No hay suficiente stock, quedan ${result} unidades de este producto`)
             setCardList(updatedCardList)
-            console.log('log de updateCardList', updatedCardList);
-            console.log('esto es cardList.stock',updatedCardList[existingProductIndex].stock);
+   
+//! guardado de items en localstorage -------------------------------------------------------
+
+            const updatedCardListJSON = JSON.stringify(updatedCardList);
+            const updatedsavedList = localStorage.setItem("updatedCardList", updatedCardListJSON);
+            console.log(updatedsavedList);
+
+//! fin guardado de items en localstorage-----------------------------------------------------
+
 
         } else {
 
             // Si el producto no existe, se agrega a cardList
             setCardList([...cardList, newProduct]);
+
+//! guardado de items en localstorage-----------------------------------------------------------
+
+            const cardListJSON = JSON.stringify(cardList);
+            const savedList = localStorage.setItem("cardList", cardListJSON);
+            console.log(savedList);
+
+//! fin guardado de items en localstorage -----------------------------------------------------------
+
         }
     };
 
