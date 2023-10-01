@@ -1,0 +1,8 @@
+.spinnerOrderDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.spinnerOrderDiv h1{
+    color: white;
+}

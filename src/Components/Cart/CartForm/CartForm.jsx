@@ -1,10 +1,12 @@
-import { useContext } from 'react';
+import { useContext} from 'react';
 import { CardContext } from '../../../context/CartContext';
 import Button from 'react-bootstrap/Button';
 
 
 function CartForm(dataForm) {
     const { handleOrders, handleOnChange } = useContext(CardContext);
+
+   
 
     const handleSubmit = (event) => {
         console.log(dataForm);
@@ -38,7 +40,7 @@ function CartForm(dataForm) {
                         />
                     <label className='label' htmlFor="telefono">Teléfono</label>
                 </div>
-                <Button variant="success" type="submit" >
+                <Button variant="success" type="submit">
                     <i className="ri-check-line icon"></i>Confirmar mi compra
                 </Button>
             </form>

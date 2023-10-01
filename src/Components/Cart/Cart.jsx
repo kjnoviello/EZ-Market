@@ -9,9 +9,10 @@ import "./Cart.css";
 import OrderConfirm from "../OrderConfirm/OrderConfirm";
 
 const Cart = () => {
-  const { cardList, id } = useContext(CardContext);
 
+  const { cardList, id } = useContext(CardContext);
   const [selectedProduct, setSelectedProduct] = useState(null);
+
 
   const handleShowDetails = (product) => {
     setSelectedProduct(product);
@@ -24,7 +25,9 @@ const Cart = () => {
   if (cardList.length === 0) {
     return <CartEmpty />;
   } else if(id != '') {
-    return <OrderConfirm></OrderConfirm>
+    return (
+      <OrderConfirm />
+      ) 
   } else {
     return (  
       <div className="container-lg row bg-white containerCart">
