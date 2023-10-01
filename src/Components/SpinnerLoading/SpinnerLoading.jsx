@@ -1,9 +1,16 @@
-import Spinner from 'react-bootstrap/Spinner';
+import { ThreeDots } from 'react-loader-spinner';
 
 function SpinnerLoading() {
-  return <div>
-            <Spinner animation="border" variant="success" size="lg" />
-         </div>
+  return <ThreeDots 
+            height="80" 
+            width="80" 
+            radius="9"
+            color="#4fa94d" 
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClassName=""
+            visible={true}
+          />
 }
 
 export default SpinnerLoading;

@@ -7,7 +7,7 @@ const SpinnerOrder = () => {
             <h1>Procesando compra...</h1>
             <div>
                 <RotatingLines
-                    strokeColor="grey"
+                    strokeColor="#157347"
                     strokeWidth="5"
                     animationDuration="0.75"
                     width="96"

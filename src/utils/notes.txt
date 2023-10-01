@@ -21,8 +21,6 @@ TAREAS:
 
 - Validar el formulario de contacto y de orden
 
-- diseñar el componente de orden generada con id
-
 - hacer un orderContext
 
 - eliminar todos los warning
