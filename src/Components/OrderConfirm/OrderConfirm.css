@@ -1,0 +1,9 @@
+.divImg {
+    max-width: 100%;
+}
+
+@media (max-width: 480px){
+    #id{
+        font-size: 20px;
+    }
+}

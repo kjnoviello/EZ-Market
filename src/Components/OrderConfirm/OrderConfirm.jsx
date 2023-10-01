@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import { CardContext } from "../../context/CartContext";
 import SpinnerOrder from "../SpinnerOrder/SpinnerOrder";
+import ('./OrderConfirm.css')
 
 const OrderConfirm = () => {
 
@@ -21,12 +22,12 @@ const OrderConfirm = () => {
         {loadingOrder ? <SpinnerOrder /> : <> <div className="container-lg row bg-white border">
             <Fade>
                 <br />
-                <div className="imgCarritoVacio shake-horizontal">
-                    <img src="compraExitosa.jpg" alt="compra_exitosa" />
+                <div className="shake-horizontal">
+                    <img src="compraExitosa.jpg" alt="compra_exitosa" className="divImg"/>
                 </div>
                 <br />
                 <h1>Tu compra se generó correctamente!</h1>
-                <h2>Tu número de orden es: <strong>{id}</strong></h2>
+                <h2 id="id">Tu número de orden es: <strong>{id}</strong></h2>
                 <br />
                 <div>
                     <span>Recibirás un mail a <strong>{dataForm.email}</strong> con los detalles de la compra. Muchas gracias por elegirnos!</span>

@@ -8,7 +8,7 @@ const CartEmpty = () => {
     <div className="container-lg row bg-white border">
         <Fade>
             <br />
-            <div className="imgCarritoVacio shake-horizontal">
+            <div className="shake-horizontal">
                 <img src="carritoVacio.png" alt="carrito_vacio" />
             </div>
             <h2>Tu carrito está vacio</h2>
