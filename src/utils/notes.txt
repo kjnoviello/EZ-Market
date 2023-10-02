@@ -19,13 +19,9 @@ TAREAS:
 
 - limitar la compra en Cart al stock del producto (toast o sweet alert)
 
-- Validar el formulario de contacto y de orden
-
 - hacer un orderContext
 
-- eliminar todos los warning
-
-- optimizar codigo y eliminar comentatios
+- optimizar codigo y eliminar comentarios
 
 - (ocional) agregar la busqueda indexada en vivo
 

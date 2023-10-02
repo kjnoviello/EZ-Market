@@ -1,26 +1,31 @@
 import { useState } from "react";
+import Swal from 'sweetalert2'
 
 export const useCount = (initial, stock) => {
 
     // defino las variables en el estado
     const [count, setCount] = useState (initial)
 
-    //funcion restar
-    const handleIncrementCount = ()=> {
-      if(count < stock){
-        setCount( count + 1 )
-        console.log("Se sumo 1 unidad al carrito");
-      }
-    }
-  
     //funcion sumar
+    const handleIncrementCount = ()=> {
+      count < stock 
+        ? setCount( count + 1 ) 
+        : Swal.fire({
+          icon: "error",
+          text: "No hay suficiente stock!",
+          toast: true,
+          position: "top",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+        });
+      }
+  
+    //funcion restar
     const handleDecrementCount = ()=> { 
-        if (count > initial) {
-          setCount( count - 1)
-          console.log("Se resto 1 unidad al carrito");
-        }
+        count > initial && setCount(count -1)     
     }
   
-    return {count, handleDecrementCount, handleIncrementCount}
+    return {count, setCount, handleDecrementCount, handleIncrementCount}
   }
 

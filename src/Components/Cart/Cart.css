@@ -199,6 +199,9 @@ input[type="tel"]:focus + label {
   font-size: 14px;
 }
 
+.error-message{
+  color: darkred;
+}
 
 
 
