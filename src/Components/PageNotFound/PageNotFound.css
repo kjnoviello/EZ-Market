@@ -1,0 +1,31 @@
+.divNotFound{
+    display: flex;
+    flex-direction: column;
+}
+
+.imagenNotFound{
+    border-radius: 30px;
+    max-width: 100%;
+}
+
+#btnNotFound{
+    position: relative;
+    bottom: 100px;
+    font-size: 30px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px){
+    #btnNotFound{
+        position: relative;
+        bottom: 70px;
+        font-size: 26px;
+}
+}
+@media (max-width: 576px){
+    #btnNotFound{
+        position: unset;
+        font-size: 16px;
+    }
+}

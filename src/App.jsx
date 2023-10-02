@@ -11,6 +11,7 @@ import Main from './Components/Main/Main';
 import Cart from './Components/Cart/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import PageNotFound from './Components/PageNotFound/PAgeNotFound';
 
 
 function App() {
@@ -27,10 +28,10 @@ function App() {
                                       </Main>
                                     </>}/>
           <Route path='/QuienesSomos' element={<QuienesSomos titulo={"Acerca de nosotros..."} />}/> 
-          <Route path='/Productos' element={  <Main titulo={"Todos"}>
+          <Route path='/Productos' element={  <Main titulo={"Nuestro catalogo"}>
                                                 <ItemListContainer/>
                                               </Main>}/>
-          <Route path='/Categoria/:cid' element={ <Main titulo={"Libros"}>
+          <Route path='/Categoria/:cid' element={ <Main titulo={"Libros"} novela={"Novelas"} novedades={"Novedades"} clasicos={"Clásicos"}>
                                                     <ItemListContainer/>
                                                   </Main>}/>
           <Route path='/Detalle/:pid' element={ <Main titulo={"Detalles del libro"}>
@@ -42,9 +43,9 @@ function App() {
           <Route path='/Cart' element={<Main titulo={"Tu carrito"}>
                                               <Cart/>
                                             </Main>}/>
-          <Route path='/OrderConfirm' element={<Main titulo={"Resumen de la compra"}>
-                                              <OrderConfirm/>
-                                            </Main>}/>
+          <Route path='*' element={<Main titulo={"La página no existe"}>
+                                              <PageNotFound/>
+                                            </Main>}/>                                  
         </Routes>
         <Footer/>
       </CardContextProvider>
