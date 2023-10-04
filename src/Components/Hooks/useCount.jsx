@@ -3,10 +3,8 @@ import Swal from 'sweetalert2'
 
 export const useCount = (initial, stock) => {
 
-    // defino las variables en el estado
     const [count, setCount] = useState (initial)
 
-    //funcion sumar
     const handleIncrementCount = ()=> {
       count < stock 
         ? setCount( count + 1 ) 
@@ -21,7 +19,6 @@ export const useCount = (initial, stock) => {
         });
       }
   
-    //funcion restar
     const handleDecrementCount = ()=> { 
         count > initial && setCount(count -1)     
     }

@@ -203,9 +203,6 @@ input[type="tel"]:focus + label {
   color: darkred;
 }
 
-
-
-
  /* responsive */
 @media (min-width: 768px) {
   .container-lg {

@@ -28,3 +28,35 @@ TAREAS:
 - (opcional) componente de LogIn para que admin actualice el stock, por ejemplo
 
 - (opcional) ver los requisitos para el 10 y el destacado
+
+
+
+
+
+
+
+    // funcion para actualizar un producto --- ID ESTA HARDCODEADO!!!!!!! SE DEBE HACER DINAMICO
+    const handleUpdateProduct = () => {
+        const queryUpdateProduct = doc(queryDB, 'products', '0kzlMjXu0vRiAA9CZwWz')
+        updateDoc(queryUpdateProduct, {
+            stock: 100
+        })
+        .then(resp => console.log(resp))
+        .catch(err => console.log(err))
+        .finally(()=> console.log('Producto actualizado correctamente'))
+    }
+
+    // funcion para actualizar en lotes
+    const handleUpdateBatchProduct = () => {
+        //* estos dos queryUpdateProduct y batch update se puede reemplazar por un map o foreach para ahcerlo dinamico donde el batch.commit() queda afuera, por ejemplo.
+        const queryUpdateProduct1 = doc(queryDB, 'products', '0kzlMjXu0vRiAA9CZwWz')
+        const queryUpdateProduct2 = doc(queryDB, 'products', '4zE5CYeoyjMdCZABKLjY')
+
+        const batch = writeBatch(queryDB)
+        batch.update(queryUpdateProduct1, { stock: 50 })
+        batch.update(queryUpdateProduct2, { stock: 50 })
+        batch.commit()
+        .then(resp => console.log(resp))
+        .catch(err => console.log(err))
+        .finally(() => console.log('Productos actualizados en masa correctamente'))
+    }

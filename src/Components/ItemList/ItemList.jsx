@@ -26,11 +26,11 @@ const ItemList = ({products}) => {
   };
 
   return (  
-        <>
-          <Filter products={products}>
-            {handleProductFilter}
-          </Filter>
-        </>
+    <>
+      <Filter products={products}>
+        {handleProductFilter}
+      </Filter>
+    </>
   )
 }
 

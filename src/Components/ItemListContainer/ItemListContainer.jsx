@@ -33,17 +33,9 @@ const ItemListContainer = () => {
       console.error("Error en la carga de datos", error)
       setLoading(false)
     }
-}
-
-fetchData()
-  },[cid])
-
-
-  useEffect(()=>{
-    return()=>{
-      console.log('desmontando itemlistcontainer');
     }
-  })
+    fetchData()
+  },[cid])
 
   return (
     <>

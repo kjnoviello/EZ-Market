@@ -2,49 +2,35 @@ import { useContext, useState} from 'react';
 import { CardContext } from '../../../context/CartContext';
 import Button from 'react-bootstrap/Button';
 
-
 function CartForm() {
     const { handleOrders, handleOnChange, dataForm } = useContext(CardContext);
     const [errors, setErrors] = useState({});
-
+    
     const validateForm = () => {
         const newErrors = {};
-      
-        // Validación del campo nombre
         if (!dataForm.name) {
           newErrors.name = "El nombre es requerido.";
         }
-      
-        // Validación del campo email
         if (!dataForm.email) {
           newErrors.email = "El email es requerido.";
         } else if (!/\S+@\S+\.\S+/.test(dataForm.email)) {
           newErrors.email = "El email no es válido.";
         }
-      
-        // Validación del campo teléfono
         if (!dataForm.phone) {
           newErrors.phone = "El teléfono es requerido.";
         } 
-      
-        // Devuelve los errores encontrados
         return newErrors;
-      };
+    };
    
-
     const handleSubmit = (event) => {
         event.preventDefault(); 
         const validationErrors = validateForm();
         
         if (Object.keys(validationErrors).length === 0) {
-            // No hay errores, puedes continuar con la lógica para confirmar la compra
-            // Por ejemplo, llamar a handleOrders() para crear una orden
             handleOrders();
         } else {
             setErrors(validationErrors);
-            // Hay errores de validación, actualiza el estado de errores
         }
-        
     };
 
     return (

@@ -8,7 +8,6 @@ const ItemCount = ( {initial, stock, handleAdd}) => {
   const {count, handleDecrementCount, handleIncrementCount} = useCount(initial, stock)
   const navigate = useNavigate()
 
-
   return (
     <div className='divItemCount'>
         <div className='left'>

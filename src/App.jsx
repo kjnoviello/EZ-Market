@@ -44,7 +44,7 @@ function App() {
                                             </Main>}/>
           <Route path='/*' element={<Main titulo={"La página no existe"}>
                                               <PageNotFound/>
-                                            </Main>}/>                                
+                                            </Main>}/>    
         </Routes>
         <Footer/>
       </CardContextProvider>

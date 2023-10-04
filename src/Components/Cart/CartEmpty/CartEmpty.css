@@ -14,6 +14,7 @@
 -webkit-animation: shake-horizontal 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
         animation: shake-horizontal 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
 }
+
 @-webkit-keyframes shake-horizontal {
   0%,
   100% {
@@ -42,6 +43,7 @@
             transform: translateX(-8px);
   }
 }
+
 @keyframes shake-horizontal {
   0%,
   100% {
@@ -70,7 +72,6 @@
             transform: translateX(-8px);
   }
 }
-
 
 /* responsive */
 @media (min-width: 768px) {

@@ -14,7 +14,6 @@ function Contact() {
     textArea: '',
   });
 
-
   const handleOnChancheContact = (evt) => {
     setContactDataForm({
         ...contactDataForm,
@@ -23,10 +22,8 @@ function Contact() {
     console.log(contactDataForm);
   };
 
-
   const consult = {}
   const queryDB = getFirestore()
-
 
   const submitContactForm = (event) => {
     event.preventDefault();

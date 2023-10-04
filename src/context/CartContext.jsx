@@ -22,12 +22,10 @@ const CardContextProvider = ({ children }) => {
     //* funcion para agregar productos a cardList
     const addProduct = (newProduct) => {
 
-        // Buscar si el producto ya existe en cardList
         const existingProductIndex = cardList.findIndex( (product) => product.id === newProduct.id );
 
         if (existingProductIndex !== -1) {
 
-            // Si el producto ya existe, actualiza la cantidad
             const updatedCardList = [...cardList];
             Swal.fire({
                 icon: "success",
@@ -39,10 +37,8 @@ const CardContextProvider = ({ children }) => {
                 timerProgressBar: true,
               })
 
-            // obtengo la diferencia entre lo que se acumula y el stock
             const result = updatedCardList[existingProductIndex].stock - updatedCardList[existingProductIndex].count
 
-            // verifico que no se pueda agregar más unidades de las que hay es stock
             newProduct.count <= result ? (updatedCardList[existingProductIndex].count += newProduct.count)  :
             Swal.fire({
                 icon: "error",
@@ -67,21 +63,20 @@ const CardContextProvider = ({ children }) => {
                 timer: 3000,
                 timerProgressBar: true,
               })
-            // Si el producto no existe, se agrega a cardList
             setCardList([...cardList, newProduct]);
             return cardList
         }
     };
 
-    //* Eliminar producto
+    // Eliminar producto
     const deleteProduct = (id) => setCardList(cardList.filter(prod => prod.id !==  id ))
 
-    //* Sumar todas las unidades
+    // Sumar todas las unidades
     const totalCount = () => {
         return cardList.reduce( (total, product) => total + product.count, 0);
     };
 
-    //* Sumar todos los precios
+    // Sumar todos los precios
     const totalPrice = () => {
         return cardList.reduce( (totalPrice, product) => totalPrice + product.precio * product.count, 0 );
     };
@@ -136,32 +131,6 @@ const CardContextProvider = ({ children }) => {
         })
     }
 
-    // funcion para actualizar un producto --- ID ESTA HARDCODEADO!!!!!!! SE DEBE HACER DINAMICO
-    const handleUpdateProduct = () => {
-        const queryUpdateProduct = doc(queryDB, 'products', '0kzlMjXu0vRiAA9CZwWz')
-        updateDoc(queryUpdateProduct, {
-            stock: 100
-        })
-        .then(resp => console.log(resp))
-        .catch(err => console.log(err))
-        .finally(()=> console.log('Producto actualizado correctamente'))
-    }
-
-    // funcion para actualizar en lotes
-    const handleUpdateBatchProduct = () => {
-        //* estos dos queryUpdateProduct y batch update se puede reemplazar por un map o foreach para ahcerlo dinamico donde el batch.commit() queda afuera, por ejemplo.
-        const queryUpdateProduct1 = doc(queryDB, 'products', '0kzlMjXu0vRiAA9CZwWz')
-        const queryUpdateProduct2 = doc(queryDB, 'products', '4zE5CYeoyjMdCZABKLjY')
-
-        const batch = writeBatch(queryDB)
-        batch.update(queryUpdateProduct1, { stock: 50 })
-        batch.update(queryUpdateProduct2, { stock: 50 })
-        batch.commit()
-        .then(resp => console.log(resp))
-        .catch(err => console.log(err))
-        .finally(() => console.log('Productos actualizados en masa correctamente'))
-    }
-
     return (
         <CardContext.Provider value={{
             cardList,
@@ -171,8 +140,6 @@ const CardContextProvider = ({ children }) => {
             totalPrice,
             clearCart,
             handleOrders,
-            handleUpdateProduct,
-            handleUpdateBatchProduct,
             handleOnChange,
             dataForm,
             id,

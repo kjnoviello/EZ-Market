@@ -1,7 +1,7 @@
 .main{
     border-radius: 30px;
     background-color: #666;
-  }
+}
 
 .mainDiv{
     margin: 30px;
@@ -35,4 +35,4 @@
     row-gap: 50px;
     column-gap: 50px;
     color: beige;
-  }
+}

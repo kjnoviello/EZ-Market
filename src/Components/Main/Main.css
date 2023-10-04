@@ -1,7 +1,7 @@
 .main{
     border-radius: 30px;
     background-color: #666;
-  }
+ }
 
 .mainDiv{
     margin: 30px;
@@ -19,6 +19,7 @@
     position: relative;
     bottom: -40px;
 }
+
 .mainDivText h3{
     text-shadow: 5px 5px 20px #000000; 
 }

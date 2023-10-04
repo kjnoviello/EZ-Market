@@ -5,19 +5,17 @@ import CartEmpty from "./CartEmpty/CartEmpty";
 import CartItems from "./CartItems/CartItems";
 import CartDetail from "./CartDetail/CartDetail";
 import CartSummary from "./CartSummary/CartSummary";
-import "./Cart.css";
 import OrderConfirm from "../OrderConfirm/OrderConfirm";
+import "./Cart.css";
 
 const Cart = () => {
 
   const { cardList, id } = useContext(CardContext);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-
   const handleShowDetails = (product) => {
     setSelectedProduct(product);
   };
-
   const handleCloseDetails = () => {
     setSelectedProduct(null);
   };

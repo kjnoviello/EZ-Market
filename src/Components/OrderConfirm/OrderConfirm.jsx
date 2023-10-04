@@ -19,30 +19,33 @@ const OrderConfirm = () => {
 
     return (
         <>
-        {loadingOrder ? <SpinnerOrder /> : <> <div className="container-lg row bg-white border">
-            <Fade>
-                <br />
-                <div className="shake-horizontal">
-                    <img src="compraExitosa.jpg" alt="compra_exitosa" className="divImg"/>
-                </div>
-                <br />
-                <h1>Tu compra se generó correctamente!</h1>
-                <h2 id="id">Tu número de orden es: <strong>{id}</strong></h2>
-                <br />
-                <div>
-                    <span>Recibirás un mail a <strong>{dataForm.email}</strong> con los detalles de la compra. Muchas gracias por elegirnos!</span>
-                </div>
-                <br />
-                <hr />
-                <div>
-                    <Link to="/Productos">
-                        <Button variant="success" className="btnVolverCarrito" onClick={clearCart}>Volver a la tienda
-                        </Button>
-                    </Link>
-                </div>  
-            </Fade>
-        </div> 
-        </>}
+            {loadingOrder ? 
+                <SpinnerOrder /> 
+            : <> 
+                <div className="container-lg row bg-white border">
+                    <Fade>
+                        <br />
+                        <div className="shake-horizontal">
+                            <img src="compraExitosa.jpg" alt="compra_exitosa" className="divImg"/>
+                        </div>
+                        <br />
+                        <h1>Tu compra se generó correctamente!</h1>
+                        <h2 id="id">Tu número de orden es: <strong>{id}</strong></h2>
+                        <br />
+                        <div>
+                            <span>Recibirás un mail a <strong>{dataForm.email}</strong> con los detalles de la compra. Muchas gracias por elegirnos!</span>
+                        </div>
+                        <br />
+                        <hr />
+                        <div>
+                            <Link to="/Productos">
+                                <Button variant="success" className="btnVolverCarrito" onClick={clearCart}>Volver a la tienda
+                                </Button>
+                            </Link>
+                        </div>  
+                    </Fade>
+                </div> 
+            </>}
         </>
     )
 }
