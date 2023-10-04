@@ -9,7 +9,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    row-gap: 50px;
+    row-gap: 40px;
 }
 
 .mainDivText{
@@ -24,7 +24,7 @@
 }
 
 .mainDivContainer{
-    padding: 30px;
+    padding: 20px;
     border-radius: 30px;
     background-color: #252424;
     margin-block: 30px;
@@ -32,8 +32,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    row-gap: 50px;
-    column-gap: 50px;
+    row-gap: 40px;
+    column-gap: 40px;
 }
 
 @media screen and (max-width: 768px) {

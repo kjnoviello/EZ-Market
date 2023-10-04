@@ -22,7 +22,7 @@ const Main = (card) => {
     <main className='main'>
       <div className='mainDiv'>
           <div className='mainDivText'>
-              <AttentionSeeker triggerOnce="false" effect="pulse"><h3> {title}</h3></AttentionSeeker>
+              <AttentionSeeker triggerOnce="false" effect="pulse"><h1> {title}</h1></AttentionSeeker>
           </div>
           <div className='mainDivContainer'>
             {card.children}

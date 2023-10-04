@@ -1,8 +1,16 @@
+/* eslint-disable react/prop-types */
+import { useState } from "react"
 
-const Filter = (children) => {
+const Filter = ({children, products}) => {
+
+  const [filtered, setFiltered] = useState('')
+  const handleFilteredChange = (event) => {
+    setFiltered(event.target.value)
+  }
+
   return (
     <>
-        {children}
+        {children ({filtered, handleFilteredChange, products})}
     </>
   )
 }
