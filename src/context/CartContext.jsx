@@ -31,7 +31,7 @@ const CardContextProvider = ({ children }) => {
             const updatedCardList = [...cardList];
             Swal.fire({
                 icon: "success",
-                text: `PRODUCTO AGREGADO! ${newProduct.count}`,
+                text: `Agregaste ${newProduct.count}u.  al carrito.`,
                 toast: true,
                 position: "top",
                 showConfirmButton: false,
@@ -46,7 +46,7 @@ const CardContextProvider = ({ children }) => {
             newProduct.count <= result ? (updatedCardList[existingProductIndex].count += newProduct.count)  :
             Swal.fire({
                 icon: "error",
-                text: `No hay suficiente stock, quedan ${result} unidades de este producto`,
+                text: `No hay suficiente stock, quedan ${result} unidades de este producto.`,
                 toast: true,
                 position: "top",
                 showConfirmButton: false,
@@ -60,7 +60,7 @@ const CardContextProvider = ({ children }) => {
         } else {
             Swal.fire({
                 icon: "success",
-                text: `PRODUCTO AGREGADO! ${newProduct.count}`,
+                text: `Agregaste ${newProduct.count}u.  al carrito.`,
                 toast: true,
                 position: "top",
                 showConfirmButton: false,
