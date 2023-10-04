@@ -1,9 +1,10 @@
 import { AttentionSeeker } from 'react-awesome-reveal'
 import { Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import ('../ItemCountStock/ItemCountStock.css')
 
 const ItemCountStock = ( ) => {
+  const navigate = useNavigate()
 
   return (
     <div className='divItemCount'>
@@ -11,9 +12,9 @@ const ItemCountStock = ( ) => {
             <AttentionSeeker effect="shakeX"><h2 className='stockText'>No hay stock</h2></AttentionSeeker>
         </div>
         <div>
-          <Link to="/Productos">
-            <Button variant="secondary">Volver a la tienda</Button>
-          </Link>
+          {/* <Link to="/Productos"> */}
+            <Button variant="secondary" onClick={()=> navigate(-1)}>Volver atrás</Button>
+          {/* </Link> */}
         </div>
     </div>
   )

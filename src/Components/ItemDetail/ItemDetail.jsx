@@ -3,32 +3,14 @@ import { useContext } from "react"
 import { CardContext } from "../../context/CartContext"
 import ItemCount from "../ItemCount/ItemCount"
 import ItemCountStock from "../ItemCountStock/ItemCountStock"
-import Swal from "sweetalert2"
 import ('./ItemDetail.css')
 
 const ItemDetail = (products) => {
 
-  const { addProduct } = useContext(CardContext)
-
-  
-  // funcion para agregar al carrito
+  const { addProduct} = useContext(CardContext)
   const handleAdd = (count)=> {
     addProduct({...products, count})
-    Swal.fire({
-      icon: "success",
-      text: `Se agrego ${count} unidades`,
-      toast: true,
-      position: "top",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-    })
   }
-
-    //* en la funcion handleAdd a count se le puede cambiar el nombre ya que
-    //* es el nombre de un parametro y va a seguir siendo la variable count.
-    //* Esto es debido a que esta funcion en itemCount tiene como parametro a count
-
 
   return (
     <div className="container-lg row bg-white containerDetail containerRow">
@@ -65,3 +47,5 @@ const ItemDetail = (products) => {
 }
 
 export default ItemDetail
+
+

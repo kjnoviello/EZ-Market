@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import { Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useCount } from '../Hooks/useCount'
 import ('../ItemCount/ItemCount.css')
 
 const ItemCount = ( {initial, stock, handleAdd}) => {
   const {count, handleDecrementCount, handleIncrementCount} = useCount(initial, stock)
+  const navigate = useNavigate()
 
 
   return (
@@ -16,9 +17,9 @@ const ItemCount = ( {initial, stock, handleAdd}) => {
           <Button variant="secondary" onClick={handleIncrementCount}><i className="ri-add-line"></i>1</Button>
         </div>
         <div>
-          <Link to="/Productos">
-            <Button variant="secondary"><i className="ri-arrow-go-back-line icon"></i>Volver</Button>
-          </Link>
+          {/* <Link to="/Productos"> */}
+            <Button variant="secondary" onClick={()=> navigate(-1)}><i className="ri-arrow-go-back-line icon"></i>Volver</Button>
+          {/* </Link> */}
           <Button variant="success" onClick={()=> handleAdd(count)}>
             <i className="ri-shopping-cart-line icon"></i>Agregar
           </Button>

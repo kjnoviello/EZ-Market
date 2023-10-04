@@ -78,6 +78,10 @@
   width: calc(100% - 15%);
 }
 
+#texto{
+  border-bottom: 2px solid #252424
+}
+
 @media screen and (max-width: 1200px) {
   #divContact{
       flex-direction: column;
@@ -94,6 +98,6 @@
     width: 100%;
   }
   .contenedorForm div div textarea{
-    width: 100%;
+    width: 100%; 
   }
 }

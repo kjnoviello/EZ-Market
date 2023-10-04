@@ -1,3 +1,4 @@
+import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { Button } from 'react-bootstrap';
@@ -23,20 +24,44 @@ function Contact() {
   };
 
 
+  const consult = {}
+  const queryDB = getFirestore()
+
+
   const submitContactForm = (event) => {
     event.preventDefault();
-    Swal.fire({
-      icon: "success",
-      text: `Enviado! Responderemos a la brevedad.`,
-      position: "top",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
+
+    consult.client = contactDataForm
+    const messageCollection = collection(queryDB, 'message')
+    addDoc(messageCollection, consult)
+    .then((resp)=>{
+      Swal.fire({
+        icon: "success",
+        text: `Enviado! Responderemos a la brevedad.`,
+        position: "top",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      })
+      console.log(resp);
     })
-    setContactDataForm({
+    .catch((err)=>{
+      Swal.fire({
+        icon: "success",
+        text: `Algo salió mal. Intente más tarde`,
+        position: "top",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      })
+      console.error(err)
+    })
+    .finally(()=> {
+      setContactDataForm({
       nombres: '',
       emails: '',
       textArea: '',
+      })
     })
   }
 

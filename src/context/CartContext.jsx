@@ -29,15 +29,9 @@ const CardContextProvider = ({ children }) => {
 
             // Si el producto ya existe, actualiza la cantidad
             const updatedCardList = [...cardList];
-
-            // obtengo la diferencia entre lo que se acumula y el stock
-            const result = updatedCardList[existingProductIndex].stock - updatedCardList[existingProductIndex].count
-
-            // verifico que no se pueda agregar más unidades de las que hay es stock
-            newProduct.count <= result ? (updatedCardList[existingProductIndex].count += newProduct.count)  :
             Swal.fire({
                 icon: "success",
-                text: `No hay suficiente stock, quedan ${result} unidades de este producto`,
+                text: `PRODUCTO AGREGADO! ${newProduct.count}`,
                 toast: true,
                 position: "top",
                 showConfirmButton: false,
@@ -45,14 +39,37 @@ const CardContextProvider = ({ children }) => {
                 timerProgressBar: true,
               })
 
+            // obtengo la diferencia entre lo que se acumula y el stock
+            const result = updatedCardList[existingProductIndex].stock - updatedCardList[existingProductIndex].count
 
+            // verifico que no se pueda agregar más unidades de las que hay es stock
+            newProduct.count <= result ? (updatedCardList[existingProductIndex].count += newProduct.count)  :
+            Swal.fire({
+                icon: "error",
+                text: `No hay suficiente stock, quedan ${result} unidades de este producto`,
+                toast: true,
+                position: "top",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+              })
             setCardList(updatedCardList)
+            console.log("esto es updatedCardList", updatedCardList);
+            return updatedCardList
 
         } else {
-
+            Swal.fire({
+                icon: "success",
+                text: `PRODUCTO AGREGADO! ${newProduct.count}`,
+                toast: true,
+                position: "top",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+              })
             // Si el producto no existe, se agrega a cardList
             setCardList([...cardList, newProduct]);
-
+            return cardList
         }
     };
 
@@ -85,8 +102,6 @@ const CardContextProvider = ({ children }) => {
     const queryDB = getFirestore()
     const handleOrders = () => {
 
-        /* The code is creating an order object with the buyer information, items in the cart, and the
-        total price. */
         order.buyer = dataForm
         order.items = cardList.map(prod => ({id: prod.id, titulo: prod.titulo, cantidad: prod.count, precio: prod.precio}))
         order.total = totalPrice()
