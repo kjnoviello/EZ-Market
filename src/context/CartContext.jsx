@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { addDoc, collection, doc, getFirestore, updateDoc, writeBatch} from "firebase/firestore"
+import { addDoc, collection, doc, getFirestore, updateDoc } from "firebase/firestore"
 import PropTypes from 'prop-types';
 import Swal from "sweetalert2";
 
