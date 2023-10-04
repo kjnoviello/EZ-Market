@@ -13,10 +13,13 @@
 .headerBar div span {
   color: beige;
   font-size: 12px;
+  position: relative;
+  bottom: 15px;
+  right: 15px;
 }
 
 .showBadge{
-  visibility:visible;
+  visibility:visible; 
 }
 
 .hideBadge{

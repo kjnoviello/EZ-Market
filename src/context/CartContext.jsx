@@ -18,7 +18,6 @@ const CardContextProvider = ({ children }) => {
     const [id, setId] = useState('')
     const [cardList, setCardList] = useState([]);
 
-
     //* funcion para agregar productos a cardList
     const addProduct = (newProduct) => {
 
