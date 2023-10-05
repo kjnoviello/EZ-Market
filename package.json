@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "bootstrap": "^5.3.1",
+    "clipboard": "^2.0.11",
     "firebase": "^10.4.0",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.5",

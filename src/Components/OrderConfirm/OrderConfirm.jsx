@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import { CardContext } from "../../context/CartContext";
 import SpinnerOrder from "../SpinnerOrder/SpinnerOrder";
+import ClipboardJS from "clipboard";
 import ('./OrderConfirm.css')
 
 const OrderConfirm = () => {
@@ -17,6 +18,13 @@ const OrderConfirm = () => {
       }, 3000)
     })
 
+    const clipboard = new ClipboardJS('.btn')
+    clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+    });
+  
     return (
         <>
             {loadingOrder ? 
@@ -30,7 +38,9 @@ const OrderConfirm = () => {
                         </div>
                         <br />
                         <h1>Tu compra se generó correctamente!</h1>
-                        <h2 id="id">Tu número de orden es: <strong>{id}.</strong></h2>
+                        <h2 id="id">Tu número de orden es:</h2>
+                        <br /> 
+                        <h4><strong id="foo">{id}</strong><Button variant="btn btn-outline-success" className="btn" data-clipboard-target="#foo"><i id="copyIcon" className="ri-file-copy-2-line">Copiar</i></Button></h4>
                         <h5><i>Conservalo para consultar el detalle!!</i></h5>
                         <br />
                         <div>
