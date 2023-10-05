@@ -81,22 +81,22 @@ function Contact() {
               <hr />
               <div className="section_social_icon">
                 <div className="section_social_container">
-                  <a href="https://es-la.facebook.com/" title="facebook" className="section_social">
+                  <a href="https://es-la.facebook.com/" title="facebook" target="_blank" rel="noopener noreferrer" className="section_social">
                     <i className="ri-facebook-fill"></i>
                   </a>
                 </div>
                 <div className="section_social_container">
-                  <a href="https://twitter.com/?lang=es" title="twitter" className="section_social">
+                  <a href="https://twitter.com/?lang=es" title="twitter" target="_blank" rel="noopener noreferrer" className="section_social">
                     <i className="ri-twitter-fill"></i>
                   </a>
                 </div>
                 <div className="section_social_container">
-                  <a href="https://www.instagram.com/" title="instagram" className="section_social">
+                  <a href="https://www.instagram.com/" title="instagram" target="_blank" rel="noopener noreferrer" className="section_social">
                     <i className="ri-instagram-fill"></i>
                   </a>
                 </div>
                 <div className="section_social_container">
-                  <a href="https://wa.me/3416851106" title="whatsapp" className="section_social">
+                  <a href="https://wa.me/3416851106" title="whatsapp" target="_blank" rel="noopener noreferrer" className="section_social">
                     <i className="ri-whatsapp-fill"></i>
                   </a>
                 </div>
