@@ -9,7 +9,7 @@
 
 ## Descripcion
 
-    Un e-commerce con venta de libros desarrollado con React + Vite. Contiene un buscador para los productos y un carrito de compras. Las órdenes de compra que se realizan actualizan el stock automáticamente. Además contiene un componente 404 para páginas inexistentes. Para almacenar la base de datos se utilizó Firebase. 
+    Un e-commerce con venta de libros desarrollado con React + Vite. Contiene un buscador para los productos y un carrito de compras. Las órdenes de compra que se realizan actualizan el stock automáticamente. Tiene la opcíon de hacer una busqueda de las órdenes realizadas sin mostrar información del comprador. Además contiene un componente 404 para páginas inexistentes. Para almacenar la base de datos se utilizó Firebase. 
 
 
 ## Estado
