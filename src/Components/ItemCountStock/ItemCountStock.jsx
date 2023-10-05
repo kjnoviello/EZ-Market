@@ -12,9 +12,7 @@ const ItemCountStock = ( ) => {
             <AttentionSeeker effect="shakeX"><h2 className='stockText'>No hay stock</h2></AttentionSeeker>
         </div>
         <div>
-          {/* <Link to="/Productos"> */}
             <Button variant="secondary" onClick={()=> navigate(-1)}>Volver</Button>
-          {/* </Link> */}
         </div>
     </div>
   )
