@@ -54,7 +54,7 @@ const OrderSearch = () => {
                     <br />
                     <h3 >Descripcion del Pedido</h3  >
                     {order.items.map((ord, index) => (
-                        <p key={index}>{ord.titulo}, {ord.cantidad}u. ${ord.precio.toFixed(2)}c/u</p>
+                        <p key={index}>{ord.titulo}, {ord.cantidad}u. ${ord.precio.toFixed(2)} c/u</p>
                     ))}
                 </div>
                 :
