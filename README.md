@@ -39,33 +39,28 @@
 
 ## Uso de la app-web
 
-    1. Clonar el repositorio desde GitHub
+    1. Clonar el repositorio desde GitHub.
 
 ``` bash
     https://github.com/kjnoviello/EZ-Market.git
-```   
+```    
 
-    2. Entra en el directorio del proyecto
-
-``` bash
-    cd noviello-ecommerce-c47175
-```   
-
-    3. Instala las dependencias
+    2. Asegurarse que se está en la carpeta correcta para instala las dependencias.
 
 ``` bash
     npm install
 ```   
 
-    4. Ejecuta el proyecto
+    3. Ejecuta el proyecto.
 
 ``` bash
     npm run dev
 ```
 
+
 ## Extra
 
-    Desarrollado por Kevin Joel Noviello en octubre del 2023, Argentina.
+    _Desarrollado por **Kevin Joel Noviello** en octubre del 2023, Argentina._
 
 
 
