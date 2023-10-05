@@ -19,11 +19,11 @@ const CartSummary = () => {
                         <i className="ri-delete-bin-7-fill icon"></i>Vaciar carrito</Button>
                 </div>
                 <div className="total">
-                    <p><strong>Cantidad total: </strong>{totalCount()}u.</p>
-                    <p><strong>Subtotal: </strong>${totalPrice()}</p>
+                    <p><strong>Cantidad total: </strong>{totalCount().toFixed(2)}u.</p>
+                    <p><strong>Subtotal: </strong>${totalPrice().toFixed(2)}</p>
                     <p><strong>Gastos de envío: </strong><i><s>$ 1200.00</s></i></p>
                     <hr />
-                    <h3><strong>Total: </strong>${totalPrice()}</h3>
+                    <h3><strong>Total: </strong>${totalPrice().toFixed(2)}</h3>
                     <hr />
                     <Button variant="success" className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i className="ri-checkbox-line icon"></i>Realizar orden</Button>
                 </div>

@@ -14,7 +14,7 @@ function Item(datos) {
 				{datos.autor}
 			</Card.Text>
 			<Card.Title>
-				${datos.precio}
+				${datos.precio.toFixed(2)}
 			</Card.Title>
 			<Link to={`/Detalle/${datos.id}`}>
 				<Button variant="success"><i className="ri-information-line icon"></i>Más info</Button>

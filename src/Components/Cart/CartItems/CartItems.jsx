@@ -28,7 +28,7 @@ const CartItems = ( {handleShowDetails, handleCloseDetails} ) => {
 								<p>{product.count}u.</p>
 							</div>
 							<div className="div5">
-								<p>${product.precio}</p>
+								<p>${product.precio.toFixed(2)}</p>
 							</div>
 							<div className="div5">
 								<Button variant="secondary" onClick={() => handleShowDetails(product)}>

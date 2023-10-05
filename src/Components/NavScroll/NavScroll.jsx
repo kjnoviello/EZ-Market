@@ -37,6 +37,12 @@ function NavScroll() {
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link as={Link} to="/Contacto">Contacto</Nav.Link>
+
+
+              <Nav.Link as={Link} to="/OrderSearch">Ordenes</Nav.Link>
+
+
+
             </Nav>
             <Form className="d-flex">
               <Nav.Link as={Link} to="/Cart">

@@ -11,6 +11,7 @@ import Cart from './Components/Cart/Cart';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import OrderSearch from './Components/OrderSearch/OrderSearch';
 
 
 function App() {
@@ -44,7 +45,17 @@ function App() {
                                             </Main>}/>
           <Route path='/*' element={<Main titulo={"La página no existe"}>
                                               <PageNotFound/>
-                                            </Main>}/>    
+                                            </Main>}/> 
+
+
+
+          <Route path='/OrderSearch' element={<Main titulo={"Mis Ordenes"}>
+                                              <OrderSearch/>
+                                            </Main>}/>
+
+
+
+
         </Routes>
         <Footer/>
       </CardContextProvider>

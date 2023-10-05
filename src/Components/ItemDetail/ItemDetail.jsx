@@ -20,7 +20,7 @@ const ItemDetail = (products) => {
           </ModalTitle>
           <hr />
           <ModalBody>
-              <h5>{products.autor}</h5>
+              <h5>{products.autor}</ h5>
               <hr />
               <p className="pDescripcion">
                   {products.descripcion}
@@ -39,7 +39,11 @@ const ItemDetail = (products) => {
             </ModalFooter>
         </div>
         <div className="col divDetailContainer contador">
+          <div className="divImg">
+            <h3>${products.precio.toFixed(2)}</h3>
+            <hr />
             <img className='img' src={products.imagen} />
+          </div>
             {products.stock === 0 ? <ItemCountStock />: <ItemCount initial={1} stock={products.stock} handleAdd={handleAdd}></ItemCount> }
         </div>
     </div>

@@ -1,0 +1,17 @@
+#searchOrder{
+    color: black;
+    margin-block: 20px;
+}
+
+#searchInput{
+    color: black;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#inputOrder{
+    text-align: center
+    ;
+}
+

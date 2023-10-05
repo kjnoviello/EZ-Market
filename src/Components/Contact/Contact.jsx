@@ -19,7 +19,6 @@ function Contact() {
         ...contactDataForm,
         [evt.target.name]: evt.target.value,
     })
-    console.log(contactDataForm);
   };
 
   const consult = {}

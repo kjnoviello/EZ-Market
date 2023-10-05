@@ -30,7 +30,8 @@ const OrderConfirm = () => {
                         </div>
                         <br />
                         <h1>Tu compra se generó correctamente!</h1>
-                        <h2 id="id">Tu número de orden es: <strong>{id}</strong></h2>
+                        <h2 id="id">Tu número de orden es: <strong>{id}.</strong></h2>
+                        <h5><i>Conservalo para consultar el detalle!!</i></h5>
                         <br />
                         <div>
                             <span>Recibirás un mail a <strong>{dataForm.email}</strong> con los detalles de la compra. Muchas gracias por elegirnos!</span>
