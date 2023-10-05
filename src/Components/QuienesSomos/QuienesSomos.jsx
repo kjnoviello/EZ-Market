@@ -1,6 +1,6 @@
 import { Fade } from 'react-awesome-reveal'
 import CarouselSlider from '../CarouselSlider/CarouselSlider'
-import '../QuienesSomos/QuienesSomos.css'
+import './QuienesSomos.css'
 
 const QuienesSomos = (datos) => {
   return (

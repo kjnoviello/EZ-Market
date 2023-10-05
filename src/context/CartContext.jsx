@@ -100,7 +100,6 @@ const CardContextProvider = ({ children }) => {
         order.items = cardList.map(prod => ({id: prod.id, titulo: prod.titulo, cantidad: prod.count, precio: prod.precio}))
         order.total = totalPrice()
         order.date = Date()
-        console.log('esta es la orden que genera', order)
 
         const ordersCollection = collection(queryDB, 'orders')
         addDoc(ordersCollection, order)
