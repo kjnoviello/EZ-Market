@@ -13,7 +13,7 @@ const ItemCountStock = ( ) => {
         </div>
         <div>
           {/* <Link to="/Productos"> */}
-            <Button variant="secondary" onClick={()=> navigate(-1)}>Volver atrás</Button>
+            <Button variant="secondary" onClick={()=> navigate(-1)}>Volver</Button>
           {/* </Link> */}
         </div>
     </div>
