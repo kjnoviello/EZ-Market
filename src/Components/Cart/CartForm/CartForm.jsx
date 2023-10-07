@@ -10,11 +10,13 @@ function CartForm() {
         const newErrors = {};
         if (!dataForm.name) {
           newErrors.name = "El nombre es requerido.";
-        }
-        if (!dataForm.email) {
+        } 
+        if (!dataForm.email || !dataForm.emailConfirm) {
           newErrors.email = "El email es requerido.";
-        } else if (!/\S+@\S+\.\S+/.test(dataForm.email)) {
+        } else if (!/\S+@\S+\.\S+/.test(dataForm.email) || !/\S+@\S+\.\S+/.test(dataForm.emailConfirm)) {
           newErrors.email = "El email no es válido.";
+        } else if (dataForm.email !== dataForm.emailConfirm){
+          newErrors.email = "Los email no coinciden";
         }
         if (!dataForm.phone) {
           newErrors.phone = "El teléfono es requerido.";
@@ -45,6 +47,14 @@ function CartForm() {
                     {errors.name && <h4 className="error-message">{errors.name}</h4>}
                 </div>
                 <div className="form-group">
+                    <input type="tel" id="telefono" name="phone" placeholder='341-1222222' required
+                    value={dataForm.phone}
+                    onChange={handleOnChange}
+                        />
+                    <label className='label' htmlFor="telefono">Teléfono</label>
+                    {errors.phone && <h4 className="error-message">{errors.phone}</h4>}
+                </div>
+                <div className="form-group">
                     <input type="email" id="email" name="email" placeholder='example@gmail.com' required
                     value={dataForm.email}
                     onChange={handleOnChange}
@@ -53,12 +63,12 @@ function CartForm() {
                     {errors.email && <h4 className="error-message">{errors.email}</h4>}
                 </div>
                 <div className="form-group">
-                    <input type="tel" id="telefono" name="phone" placeholder='341-1222222' required
-                    value={dataForm.phone}
+                    <input type="email" id="email" name="emailConfirm" placeholder='example@gmail.com' required
+                    value={dataForm.emailConfirm}
                     onChange={handleOnChange}
                         />
-                    <label className='label' htmlFor="telefono">Teléfono</label>
-                    {errors.phone && <h4 className="error-message">{errors.phone}</h4>}
+                    <label className='label' htmlFor="email">Confirmar email</label>
+                    {errors.email && <h4 className="error-message">{errors.email}</h4>}
                 </div>
                 <Button variant="success" type="submit">
                     <i className="ri-check-line icon"></i>Confirmar mi compra

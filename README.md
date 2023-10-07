@@ -32,6 +32,7 @@
     * "firebase" - Uasdo para guardar la base de datos incuyendo los productos, órdenes y mensajes de contactos.
     * "sweetalert2" - Para dar mensajes a los usuarios con estilos mas detallados mejorando la UX.
     * "ClipboardJS" - El uso es para copiar el numero de orden una vez hecha la compra.
+    * "Atropos" - La idea de usar esta libreria es para darle un dinamismo a las card.
     * "react-awesome-reveal" - Animación para el montaje de componentes mejorando la dinámica del UX
     * "react-loader-spinner" - Para efectos de loading al conectar a la BD y dar un mejora de UX.
     * "react-router-dom" y "react-dom" - Para establecer el enrutamiento.
