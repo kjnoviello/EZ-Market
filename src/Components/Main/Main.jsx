@@ -1,7 +1,7 @@
 import { AttentionSeeker } from 'react-awesome-reveal';
 import { useParams } from 'react-router-dom';
 
-import ('./main.css');
+import ('./Main.css');
 
 const Main = (card) => {
 
