@@ -3,8 +3,7 @@
 
 [Go to Ez-Market](https://ezmarket.netlify.app/)
 
-[Imagen de portada](/public/preview-ezmarket.png "Esta es una previsualizacion del proyecto.")
-
+[Imagen de portada](/public/preview-ezmarket.png)
 
 ## Descripcion
 
@@ -61,7 +60,7 @@ El estado del proyecto se encuentra como un MVP robusto. Se prevee la implementa
 
 ## Extra
 
-_Desarrollado por **Kevin Joel Noviello** en junio del 2023, Argentina._
+_Desarrollado por **Kevin Joel Noviello** en octubre del 2023, Argentina._
 
 [Linkedin Kevin Joel Noviello](https://www.linkedin.com/in/kevinjoelnoviello/)
 
