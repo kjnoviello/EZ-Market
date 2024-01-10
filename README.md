@@ -3,7 +3,7 @@
 
 [Go to Ez-Market](https://ezmarket.netlify.app/)
 
-[Imagen de portada](/public/preview-ezmarket.png)
+![Imagen de portada](/public/preview-ezmarket.png)
 
 ## Descripcion
 
